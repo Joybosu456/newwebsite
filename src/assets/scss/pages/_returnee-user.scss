@@ -1,0 +1,177 @@
+.returnee-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 71px);
+}
+.resume-modal{
+position: fixed;
+inset:0;
+height:100vh;
+width:100%;
+background:rgba(0, 0, 0, 0.75);
+// opacity:0.75;
+z-index:40;
+}
+.returnee-user {
+    // position: fixed;
+    // top: 0;
+    .returnee-user__card {
+        position: relative;
+        // top: 50%;
+        // transform:translateX(-50%);
+        max-width: 848px;
+        width: 100%;
+        margin:auto;
+        background-image: linear-gradient(180deg, #0072bb 0%, #002356 100%);
+        box-shadow: 0px 0px 16px rgba(214, 214, 214, 0.25);
+        border-radius: 16px;
+        display: flex;
+        justify-content: space-between;
+        padding: 13px 16px 30px 30px;
+        // z-index: 1;
+
+        @include breakpoint(mobile-max) {
+            background-image: none;
+            background-color: $violet;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            padding: 30px 30px;
+        }
+
+        @include breakpoint(mobile-screen) {
+            padding: 20px 15px;
+        }
+
+        .card-left {
+            padding-top: 19px;
+
+            .title {
+                color: $white;
+                font-size: 42px;
+                font-weight: 500;
+                line-height: 1;
+                margin-bottom: 9px;
+
+                @include breakpoint(mobile-max) {
+                    font-size: 30px;
+                }
+
+                @include breakpoint(mobile-screen) {
+                    font-size: 26px;
+                }
+
+                span {
+                    font-size: 32px;
+
+                    @include breakpoint(mobile-max) {
+                        font-size: 20px;
+                    }
+
+                    @include breakpoint(mobile-screen) {
+                        font-size: 18px;
+                    }
+                }
+            }
+
+            .details {
+                color: $white;
+                font-weight: 300;
+                font-size: 18px;
+                margin-bottom: 62px;
+
+                @include breakpoint(mobile-max) {
+                    margin-bottom: 20px;
+                    font-size: 14px;
+                }
+
+                @include breakpoint(mobile-screen) {
+                    margin-bottom: 15px;
+                }
+            }
+
+            .subtitle {
+                color: $white;
+                font-weight: 500;
+                font-size: 24px;
+                margin-bottom: 8px;
+
+                @include breakpoint(mobile-max) {
+                    font-size: 16px;
+                }
+            }
+
+            .sub-details {
+                color: $white;
+                font-weight: 300;
+                font-size: 16px;
+                margin-bottom: 18px;
+
+                @include breakpoint(mobile-max) {
+                    font-size: 14px;
+                    margin-bottom: 15px;
+                }
+            }
+
+            .common-btn {
+                font-size: 16px;
+                margin: 0;
+                color: white;
+                @include breakpoint(mobile-max) {
+                    font-size: 12px;
+                }
+
+                @include breakpoint(mobile-screen) {
+                    // max-width: 200px;
+                    padding: 12px 15px;
+                }
+            }
+            &:hover{
+                color: white;
+            }
+
+            @include breakpoint(mobile-max) {
+                order: 1;
+            }
+        }
+
+        .document-img {
+            width: 169px;
+            height: 169px;
+
+            @include breakpoint(mobile-max) {
+                display: none;
+            }
+        }
+
+        .document-mobile-img {
+            display: none;
+
+            @include breakpoint(mobile-max) {
+                display: block;
+                width: 80px;
+                height: 80px;
+                background-color: $white;
+                border-radius: 50px;
+            }
+
+            @include breakpoint(mobile-screen) {
+                width: 70px;
+                height: 70px;
+            }
+        }
+
+        .golden-star-img {
+            display: none;
+
+            @include breakpoint(mobile-max) {
+                display: block;
+                position: absolute;
+                top: 0;
+                width: 100%;
+                // z-index: -99;
+            }
+        }
+    }
+}

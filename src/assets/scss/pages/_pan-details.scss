@@ -1,0 +1,409 @@
+.pan-details,
+.email-page {
+  .viewHeight {
+    // background: red;
+    height: 100% !important;
+    min-height: calc(75vh);
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint(ipad-max) {
+      min-height: 84vh;
+    }
+    .bottom-list {
+      margin-top: auto !important;
+      padding-bottom: 5px;
+      ul {
+        margin-top: 15px;
+      }
+    }
+  }
+
+  .form-control{
+    &:disabled{
+      background-color: $white !important;
+    }
+  }
+}
+
+.pan-fetch-detail {
+  position: relative;
+  width: 389px;
+  height: 231px;
+  margin-bottom: 20px;
+
+  @include breakpoint(mobile-screen) {
+    max-width: 389px;
+    width: 100%;
+  }
+  @include breakpoint(small-screen) {
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+  .pan-demo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+
+    @include breakpoint(mobile-screen) {
+      object-fit: contain;
+    }
+  }
+
+  .pan-form {
+    content: "";
+    position: absolute;
+    width: 70%;
+    height: auto;
+    bottom: 30px;
+    padding-left: 30px;
+
+    @include breakpoint(mobile-screen) {
+      bottom: 58px;
+    }
+
+    @include breakpoint(extra-small-screen) {
+      padding-left: 25px;
+    }
+
+    :disabled {
+      background-color: $panbg !important;
+      border: 0 !important;
+    }
+
+    .form-group {
+      @include breakpoint(mobile-screen) {
+        margin-bottom: 2px;
+      }
+    }
+
+    label {
+      text-transform: uppercase;
+      display: block;
+      font-size: 9px;
+      color: $violet;
+      line-height: 10px;
+      margin-bottom: 2px;
+
+      @include breakpoint(mobile-screen) {
+        font-size: 7px;
+      }
+    }
+    input[type="date"] {
+      @include breakpoint(mobile-screen) {
+        position: relative;
+        left: -5px;
+        top: -2px;
+      }
+    }
+    input {
+      background-color: transparent;
+      border: 0;
+      color: $violet;
+      font-size: 9px;
+      line-height: 11px;
+      font-weight: 600;
+      height: 15px;
+      padding: 0 0px;
+      border-radius: 2px;
+
+      @include breakpoint(mobile-screen) {
+        width: 100%;
+        height: 10px;
+        font-size: 7.5px;
+      }
+    }
+  }
+}
+
+.page-left-btn {
+  display: flex;
+  align-items: center;
+  width: 389px;
+
+  @include breakpoint(mobile-screen) {
+    max-width: 389px;
+    width: 100%;
+  }
+  @include breakpoint(small-screen) {
+    width: 100%;
+  }
+
+  button {
+    height: 45px;
+    width: 50%;
+
+    @include breakpoint(mobile-screen) {
+      font-size: 12px;
+    }
+
+    &.secondary-btn {
+      @include breakpoint(small-screen) {
+        padding: 8px;
+      }
+    }
+  }
+
+  .common-btn {
+    @include breakpoint(mobile-screen) {
+      width: 48%;
+    }
+  }
+}
+
+.pan-bottom-list {
+  margin-top: 50px;
+  padding-bottom: 0;
+
+  @include breakpoint(desktop-large) {
+    margin-top: 25px;
+  }
+  @include breakpoint(desktop-small) {
+    margin-top: 25px;
+  }
+  @include breakpoint(mobile-screen) {
+    margin-top: 50px;
+  }
+  @include breakpoint(extra-small-screen) {
+    margin-top: 30px;
+  }
+}
+
+//Modal
+
+.pan-detailModal {
+  .upload-front-side {
+    width: 254px;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    cursor: pointer;
+  }
+  .modal-dialog {
+    max-width: 55% !important;
+
+    @include breakpoint(mobile-screen) {
+      max-width: 85% !important;
+    }
+    @include breakpoint(small-screen) {
+      max-width: 92% !important;
+    }
+  }
+}
+
+.manual-detail {
+  font-size: 18px;
+  line-height: 21px;
+  color: $blue;
+  text-align: center;
+
+  @include breakpoint(small-screen) {
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+
+.upload-img-modal,
+.pan-upload-modal {
+  .modal-dialog {
+    max-width: 55% !important;
+    margin: 0 auto;
+  }
+  .modal-body {
+    .correction-img {
+      row-gap: 10px;
+    }
+
+    .modal-img {
+      width: 100%;
+    }
+
+    .img-note {
+      font-size: 12px;
+      text-transform: capitalize;
+      margin: 6px 0 0 0;
+      text-align: center;
+      color: $medium-light-gray;
+      line-height: 14px;
+    }
+
+    h3 {
+      text-align: left;
+      margin-bottom: 23px;
+
+      &::first-letter {
+        text-transform: capitalize;
+      }
+    }
+
+    .points-label {
+      color: $black;
+      text-transform: capitalize;
+      margin: 15px 0 20px 0;
+      text-align: left;
+      font-size: 14px;
+      color: $black;
+      line-height: 17px;
+    }
+  }
+}
+
+.upload-img-modal,
+.pan-upload-modal {
+  .modal-dialog {
+    max-width: 55% !important;
+    margin: 0 auto;
+
+    @include breakpoint(ipad-max) {
+      max-width: 80% !important;
+    }
+
+    @include breakpoint(mobile-max) {
+      max-width: 90% !important;
+    }
+  }
+
+  .modal-body {
+    .correction-img {
+      row-gap: 10px;
+    }
+
+    .modal-left {
+      @include breakpoint(mobile-max) {
+        display: flex;
+        margin-bottom: 30px;
+      }
+
+      .modal-img {
+        width: 100%;
+
+        @include breakpoint(ipad-max) {
+          width: 220px;
+        }
+
+        @include breakpoint(mobile-max) {
+          width: 260px;
+          height: 175px;
+          // object-fit: contain;
+        }
+
+        @include breakpoint(mobile-screen) {
+          width: 119px;
+          height: 80px;
+        }
+      }
+    }
+
+    .modal-img {
+      width: 100%;
+    }
+
+    .img-note {
+      font-size: 12px;
+      text-transform: capitalize;
+      margin: 10px 0 0 0;
+      text-align: center;
+      color: $medium-light-gray;
+      line-height: 14px;
+
+      @include breakpoint(mobile-max) {
+        font-size: 10px;
+      }
+    }
+
+    .modal-title {
+      text-align: left;
+      margin-bottom: 23px !important;
+
+      &::first-letter {
+        text-transform: capitalize;
+      }
+
+      @include breakpoint(mobile-max) {
+        font-size: 16px;
+        font-weight: 500;
+        text-align: center;
+      }
+    }
+
+    .points-label {
+      color: $black;
+      text-transform: capitalize;
+      margin: 15px 0 20px 0;
+      text-align: left;
+      font-size: 14px;
+      color: $black;
+      line-height: 17px;
+
+      @include breakpoint(mobile-max) {
+        font-size: 15px;
+        line-height: 17px;
+        margin: 5px 0 8px 10px;
+      }
+
+      @include breakpoint(mobile-screen) {
+        font-size: 14px;
+        line-height: 15px;
+        margin: 0 0 8px 10px;
+      }
+    }
+
+    .points-remember-wrapper {
+      @include breakpoint(mobile-max) {
+        margin-top: 8px;
+        margin-left: 10px;
+      }
+
+      li {
+        @include breakpoint(mobile-max) {
+          margin-bottom: 8px;
+        }
+
+        i {
+          @include breakpoint(mobile-max) {
+            width: 15px;
+            height: 15px;
+            font-size: 9px;
+            margin-right: 8px;
+          }
+
+          @include breakpoint(mobile-screen) {
+            width: 14px;
+            height: 14px;
+            font-size: 8px;
+          }
+        }
+
+        .remember-points {
+          @include breakpoint(mobile-max) {
+            font-size: 12px;
+            line-height: 1.1;
+          }
+
+          @include breakpoint(mobile-screen) {
+            font-size: 10px;
+          }
+        }
+      }
+    }
+  } 
+}
+
+.pan-manual-form {
+  margin-top: 15px;
+
+  @include breakpoint(mobile-screen){
+    margin-top: 30px;
+  }
+  .custom-suggest {
+    display: block;
+  }
+  .form-group {
+    margin-bottom: 25px;
+    margin-right: 0;
+  }
+}
+button.btn-logout {
+  display: none !important;
+}

@@ -1,0 +1,290 @@
+.social-list {
+  margin-bottom: 20px;
+  padding: 20px;
+
+  @include breakpoint(desktop-large) {
+    margin-bottom: 10px;
+  }
+  @include breakpoint(desktop-small) {
+    margin-bottom: 8px;
+  }
+
+  @include breakpoint(mobile-screen) {
+    padding: 20px 15px;
+  }
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    @include breakpoint(ipad-max) {
+      gap: 10px;
+    }
+
+    li {
+      width: calc(100% / 2);
+      text-align: center;
+      border-right: 1.5px solid #e2e2e2;
+
+      &:last-child {
+        border-right: none;
+      }
+
+      img {
+        border: 0.5px solid $violet;
+        border-radius: 12px;
+        width: 90px;
+        height: 90px;
+        object-fit: contain;
+        padding: 15px;
+        // margin-bottom: 10px;
+
+        @include breakpoint(desktop-large) {
+          width: 80px;
+          height: 80px;
+          // margin-bottom: 8px;
+        }
+        @include breakpoint(desktop-small) {
+          width: 70px;
+          height: 70px;
+          padding: 12px;
+        }
+        @include breakpoint(desktop-base) {
+          width: 60px;
+          height: 60px;
+          border-radius: 8px;
+        }
+        @include breakpoint(small-screen) {
+          width: 55px;
+          height: 55px;
+          margin-bottom: 5px;
+        }
+      }
+
+      .social-name {
+        font-size: 14px;
+        line-height: 24px;
+        color: $violet;
+        text-transform: uppercase;
+
+        @include breakpoint(small-screen) {
+          font-size: 10px;
+          line-height: 16px;
+        }
+      }
+    }
+  }
+}
+.submit-btn2 {
+  // margin-top: 10px;
+
+  @include breakpoint(mobile-max) {
+    margin-top: 10px;
+  }
+}
+
+.verify-card-wrapper {
+  max-width: 600px;
+
+  .common-card {
+    padding: 0;
+  }
+}
+
+.verify-card {
+  padding-top: 10px;
+}
+.or-divider {
+  text-align: center;
+  position: relative;
+  margin: 17px 0;
+
+  // @include breakpoint(desktop-large) {
+  //   margin-bottom: 22px;
+  // }
+
+  // @include breakpoint(desktop-small) {
+  //   margin-bottom: 25px;
+  // }
+
+  &:before {
+    position: absolute;
+    content: "";
+    width: 70%;
+    height: 1px;
+    background-color: $dark-silver;
+    left: 0;
+    right: 0;
+    top: 50%;
+    margin: 0 auto;
+    transform: translateY(-50%);
+  }
+  p {
+    font-size: 16px;
+    line-height: 1;
+    font-weight: 400;
+    color: $violet;
+    border: 1px solid $most-lightest-gray;
+    border-radius: 50%;
+    display: inline-block;
+    padding: 10px;
+    margin: auto;
+    background-color: $white;
+    z-index: 1;
+    position: relative;
+
+    @include breakpoint(desktop-small) {
+      font-size: 14px;
+      padding: 10px;
+    }
+  }
+}
+.email-forms {
+  .form-group {
+    margin: 0 15px 0 0;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  // .form-control {
+  //   width: 70%;
+  //   height: 100%;
+  //   display: inline-block;
+  //   margin-right: 20px;
+  //   padding: 11px 8px;
+  //   margin-right: 10px;
+  //   @include breakpoint(desktop-base) {
+  //     width: 65%;
+  //     margin-right: 15px;
+  //   }
+  //   @include breakpoint(ipad-max) {
+  //     width: 60%;
+  //     margin-right: 10px;
+  //   }
+  //   @include breakpoint(mobile-max) {
+  //     width: 100%;
+  //     margin-right: 0;
+  //     margin-bottom: 20px;
+  //     font-size: 14px;
+  //   }
+  // }
+
+  &.common-card {
+    padding: 20px 20px 15px 20px;
+
+    @include breakpoint(mobile-max) {
+      padding: 25px 20px 15px 20px;
+    }
+  }
+}
+
+.faster-box {
+  display: flex;
+  justify-content: space-between;
+  background-color: #aeddff;
+  padding: 14px;
+  border-radius: 12px 12px 0px 0px;
+  // position: absolute;
+  // right: 25px;
+  // top: 35%;
+
+  @include breakpoint(mac-1920) {
+    top: 40%;
+  }
+  @include breakpoint(desktop-xxl) {
+    top: 40%;
+  }
+  @include breakpoint(desktop-xl) {
+    top: 38%;
+  }
+  @include breakpoint(desktop-large) {
+    top: 36%;
+    right: 70px;
+  }
+  @include breakpoint(desktop-medium) {
+    top: 36%;
+    right: 50px;
+  }
+  @include breakpoint(desktop-base) {
+    right: 15px;
+  }
+  @include breakpoint(ipad-max) {
+    right: 0px;
+  }
+  @include breakpoint(mobile-max) {
+    display: none;
+  }
+
+  img {
+    width: 50px;
+    height: 15px;
+    margin-top: 5px;
+  }
+  p {
+    font-size: 20px;
+    color: $violet1;
+    font-weight: 500;
+    // font-style: italic;
+    // margin: 0px 0px 10px 20px;
+
+    @include breakpoint(desktop-large) {
+      font-size: 16px;
+    }
+  }
+
+  .faster-word {
+    color: $strong-blue;
+    margin-left: 15px;
+  }
+
+  .faster-word-wrapper {
+    display: flex;
+  }
+}
+
+.faster-mob {
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  display: none;
+
+  @include breakpoint(mobile-max) {
+    display: flex;
+    margin-bottom: 25px;
+  }
+
+  img {
+    transform: rotate(90deg);
+    width: 45px;
+  }
+
+  p {
+    font-size: 16px;
+    color: $blue;
+    margin-left: -8px;
+  }
+}
+
+.email-rating {
+  .rating-value {
+    color: $violet;
+    font-size: 24px;
+    margin-right: 14px;
+  }
+  .rating-image {
+    margin-right: 4px;
+
+    img {
+      width: 20px;
+      height: 19px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+.email-page {
+  padding-top: 15px;
+}

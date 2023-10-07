@@ -1,0 +1,223 @@
+.nominee-detail {
+  &-info {
+    padding: 30px 60px 28px 24px;
+    @include breakpoint(mobile-max) {
+      padding: 20px 30px 28px 15px;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    .nominee-form {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+      h2 {
+        font-size: 22px;
+        font-weight: 400;
+        color: #002356;
+        margin-left: -6px;
+      }
+      .wrapper-2,
+      .wrapper-1 {
+        border-top: 2px solid #bcbcbc;
+        padding-top: 40px;
+        .nominee-rem {
+          display: block;
+        }
+      }
+      .wrapper-0 {
+        h2 {
+          margin-bottom: 20px;
+        }
+        .nominee-rem {
+          display: none;
+        }
+      }
+      .nominee {
+        // margin-bottom: 20px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        .form-row {
+          justify-content: space-between;
+          & > .col,
+          .form-row > [class*="col-"] {
+            padding-right: 0;
+            padding-left: 0;
+            //  background: red;
+          }
+        }
+      }
+      .nominee-guardian {
+        display: none;
+        flex-direction: column;
+        margin-bottom: 20px;
+        @include breakpoint(mobile-max) {
+          margin-top: 20px;
+        }
+        &-heading {
+          width: 100%;
+          margin: 0 0 20px -6px;
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 1.166;
+          color: #002356;
+
+        }
+        .form-row {
+          justify-content: space-between;
+          width: 100%;
+          & > .col,
+          .form-row > [class*="col-"] {
+            padding-right: 0;
+            padding-left: 0;
+          }
+        }
+      }
+
+      .form-group {
+        width: 45%;
+        flex: unset;
+        height: auto;
+        margin: 0;
+        margin-bottom: 20px;
+        @include breakpoint(ipad-max) {
+          width: 48%;
+        }
+        @include breakpoint(mobile-max) {
+          margin-bottom: 33px;
+        }
+        @include breakpoint(mobile-screen) {
+          width: 100%;
+        }
+        .form-label {
+          white-space: nowrap;
+        }
+        input:focus + .form-label {
+          font-size: 12px;
+        }
+      }
+    }
+    
+    .nominee-add {
+      color: $dark-blue;
+    }
+
+    .nominee-add {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 10px 0 15px -5px;
+    
+      &-icon {
+        font-size: 18px;
+      }
+      &-text {
+        margin-bottom: unset;
+        font-size: 16px;
+        line-height: 16px;
+        font-family: $primary-font;
+        font-weight: 400;
+        @include breakpoint(ipad-max) {
+          font-size: 15px;
+        }
+        @include breakpoint(mobile-max) {
+          font-size: 13px;
+        }
+        @include breakpoint(mobile-screen) {
+          font-size: 12px;
+        }
+      }
+    }
+    .nominee-rem {
+      color: $orange;
+      display: none;
+      position: relative;
+      top: -25px;
+      i {
+        font-size: 16px;
+      }
+    }
+    .nominee-bottom {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      @include breakpoint(mobile-screen) {
+        gap: 18px;
+      }
+      @include breakpoint(small-screen) {
+        gap: 16px;
+      }
+      @include breakpoint(extra-small-screen) {
+        gap: 12px;
+      }
+      &-txt {
+        margin-bottom: unset;
+        font-size: 16px;
+        font-family: $primary-font;
+        color: $dark-blue;
+        font-weight: 400;
+        @include breakpoint(ipad-max) {
+          font-size: 15px;
+        }
+        @include breakpoint(mobile-screen) {
+          font-size: 14px;
+        }
+        @include breakpoint(small-screen) {
+          font-size: 12px;
+        }
+        @include breakpoint(extra-small-screen) {
+          font-size: 11px;
+        }
+      }
+    }
+  }
+
+  .react-select-dropdown {
+    border: 1px solid $most-lightest-gray;
+    border-radius: 12px;
+    padding: 0;
+  }
+
+  .react-select {
+    &__control {
+      border: 0;
+      background-color: unset;
+      padding: 0 0 0 0px;
+      display: flex;
+      align-items: flex-start;
+    }
+
+    &__indicator {
+      padding-top: 0;
+    }
+
+    &__option {
+      color: $gray;
+      font-size: 15px;
+      border-bottom: 1px solid $most-lightest-gray;
+      padding: 8px 22px;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      &:hover,
+      &:focus {
+        // color: $lightest-silver;
+        background-color: #f5f5f5;
+      }
+    }
+
+    &__single-value {
+      color: #495057;
+      font-size: 14px;
+    }
+
+    &__value-container {
+      padding: 0;
+    }
+  }
+}

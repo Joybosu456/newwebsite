@@ -1,0 +1,80 @@
+{
+  "name": "ekyc2.0",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@hookform/error-message": "^2.0.0",
+    "@hookform/resolvers": "^2.9.7",
+    "@moengage/web-sdk": "^1.0.3",
+    "@sentry/react": "^7.58.1",
+    "axios": "^0.27.2",
+    "bootstrap": "^4.6.0",
+    "clevertap-web-sdk": "^1.6.2",
+    "crypto-js": "^4.1.1",
+    "dotenv": "^16.0.3",
+    "env-cmd": "^10.1.0",
+    "flyy-web-sdk": "^2.5.4",
+    "gapi-script": "^1.2.0",
+    "i": "^0.3.7",
+    "install": "^0.13.0",
+    "jquery": "^3.7.0",
+    "npm": "^8.19.1",
+    "pdf-viewer-reactjs": "^2.2.3",
+    "popper.js": "^1.16.1",
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.5.0",
+    "react-dom": "^18.2.0",
+    "react-facebook-login": "^4.1.1",
+    "react-google-login": "^5.2.2",
+    "react-hook-form": "^7.34.2",
+    "react-rating-stars-component": "^2.2.0",
+    "react-router-dom": "^6.3.0",
+    "react-scripts": "5.0.1",
+    "react-select": "^5.6.1",
+    "react-signature-canvas": "^1.0.6",
+    "react-speech-kit": "^3.0.1",
+    "react-toastify": "^9.1.1",
+    "sass": "^1.54.5",
+    "web-vitals": "^2.1.4",
+    "yup": "^0.32.11"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "start:pwa": "env-cmd -f .env.pwa react-scripts start",
+    "start:naom": "env-cmd -f .env.naom react-scripts start",
+    "start:ekyc": "env-cmd -f .env.ekyc  react-scripts start",
+    "server": "node server",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "build:pwa": "env-cmd -f .env.pwa npm run-script build",
+    "build:naom": "env-cmd -f .env.naom npm run-script build",
+    "build:ekyc": "env-cmd -f .env.ekyc npm run-script build"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "gulpfile.js",
+  "repository": {
+    "type": "git",
+    "url": "http://gitlab.bajajfinservsecurities.in/frontend/ekyc2.0.git"
+  },
+  "author": "",
+  "license": "ISC"
+}

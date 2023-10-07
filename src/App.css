@@ -1,0 +1,278 @@
+.capture-btn {
+  position: absolute;
+  bottom: 3rem;
+  background: transparent;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.selfi-text {
+  position: absolute;
+  bottom: 7px;
+  font-size: 12px;
+  color: #000;
+  background: transparent;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+canvas.video-feed {
+  border-radius: 10px;
+  margin-bottom: -5px;
+  /* background-image: url(./assets/images/selfie.png); */
+  background-repeat: no-repeat;
+  width: 100%;
+  background-size: cover;
+  height: 200px;
+}
+
+.form-control[readonly] {
+  background-color: unset;
+  opacity: 1;
+}
+
+.Toastify__toast-theme--colored.Toastify__toast--success {
+  background: #ceecff !important;
+  color: #002356 !important;
+  font-size: 12px !important;
+}
+
+.Toastify__close-button {
+  display: none;
+}
+
+
+.twitter-btn {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  background: red;
+  opacity: 0;
+}
+
+.social-btn {
+  cursor: pointer;
+}
+
+input[type="date"] {
+  text-transform: uppercase;
+}
+
+.mic-icon {
+  position: fixed;
+  top: 20%;
+  right: 20%;
+  cursor: pointer;
+}
+
+.mic-icon i {
+  font-size: 20px;
+  color: gray;
+}
+
+.mic-icon .mic-on {
+  font-size: 20px;
+  color: darkslateblue;
+}
+
+.mic-icon .mic-off {
+  font-size: 20px;
+  color: gray;
+}
+
+.form-group .mic_wrapper {
+  width: 10px;
+  height: 20px;
+  position: absolute;
+  top: 10px;
+  right: 0;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.form-group .mute_mic {
+  width: 20px;
+  right: -5px;
+}
+
+.form-group .mic_wrapper img {
+  width: 100%;
+  height: 100%;
+}
+
+.form-group .email_mic_wrapper {
+  top: 40%;
+  right: 40%;
+}
+
+.form-group .email_mic {
+  right: 42%;
+}
+
+.form-group .nominee_mic_wrapper {
+  display: none;
+}
+
+.addSpeech:focus~.nominee_mic_wrapper,
+.speechActive~.nominee_mic_wrapper {
+  display: block;
+}
+
+
+.listen-mic {
+  font-size: 14px;
+  width: 20px;
+  background: white;
+  height: 30px;
+  text-align: center;
+  color: #002356;
+  line-height: unset;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: -3px;
+  vertical-align: bottom;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.listen-mic .fa-microphone-slash {
+  color: gray;
+}
+
+.listen-mic::before {
+  position: relative;
+  top: 8px;
+
+}
+
+
+
+.upload-doc-para {
+  font-size: 14px;
+  line-height: 16px;
+  padding: 0 30px;
+  text-align: center;
+  color: #535658;
+}
+
+.upload-doc-red {
+  color: #F15D39;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.upload-doc-list {
+ display: flex;
+ position: relative;
+ margin-top: 10px;
+}
+
+.upload-doc-list-item {
+ display: flex;
+ gap: 7px;
+ align-items: center;
+ border-right: 1px solid #636363;
+ width: 100%;
+}
+
+.upload-doc-list-item:last-child{
+ border-right: none;
+}
+
+.upload-doc-list-img-wrapper {
+  background-color: #126FB5;
+  border-radius: 100%;
+  min-height: 40px;
+  aspect-ratio: 1/1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.upload-doc-list-img {
+  max-width: 22px;
+  object-fit: contain;
+}
+
+.upload-doc-list-item .point {
+ font-weight: 400;
+ font-size: 10px;
+ line-height: 14px;
+ color: #000000;
+}
+.upload-doc-step{
+font-weight: 400;
+font-size: 14px;
+line-height: 17px;
+color: #002356;
+}
+.curser-disable {
+  cursor: not-allowed !important;
+}
+
+.curser-disable:hover {
+  cursor: not-allowed !important;
+}
+
+.select>.select {
+  display: none;
+}
+
+.headSpeaker {
+  font-size: 21px;
+  color: #002356;
+}
+
+.audioP {
+  font-size: 18px;
+  color: #002356;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  min-width: 100px
+}
+
+.audio-btn-grp {
+  align-items: center;
+  display: flex;
+  gap: 10px;
+  justify-content: space-evenly;
+  max-width: 360px;
+  padding: 20px;
+}
+
+.independence-pack {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 10px;
+}
+
+.independence-pack::before {
+  position: absolute;
+  content: "";
+  left: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 115%;
+  height: 30px;
+  background: rgba(217, 217, 217, 0.25);
+  z-index: -1;
+  border-radius: 6px 24px 23px 9px;
+
+  @media (max-width: 575px) {
+    width: 100%;
+  }
+}
+.subscribe .packs__left .packs__bottom p.order {
+  margin-right: 7px;
+  padding-right: 7px;
+}
+.fatherImg{
+  max-width: 30px;
+}

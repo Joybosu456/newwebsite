@@ -1,0 +1,78 @@
+@charset 'utf-8';
+
+
+
+//All Basic fonts and colors css
+@import "vendors/_vendors";
+
+//All Basic fonts and colors css 
+@import "helpers/_helpers-dir";
+  
+// All base structure css
+@import "base/_base-dir";
+ 
+//Components
+@import "components/_components-dir";
+
+ 
+// All layout Directory
+@import "layout/_layour-dir";
+
+// All Pages css
+@import "pages/_pages-dir";
+
+
+@media (max-width: 1366px) {
+    .user-bottom-img img {
+      height: 190px;
+    }
+  
+    .user-bottom-img.img-hight img {
+      height: 216px;
+    }
+  
+    .user-bottom-img.persnol-details img {
+     height: 337px;
+    }
+    .user-bottom-img.nominee-details img {
+      height: 235px;
+  
+    }
+  
+    .user-bottom-img.bank-details img {
+  
+      height: 262px;
+  
+    }
+  
+    .user-bottom-img.document-img img {
+  
+      height: 219px;
+  
+    }
+  
+    .user-bottom-img.panUpload-img img {
+  
+      height: 168px;
+  
+    }
+  
+    .user-bottom-img.checkUpload-img img {
+  
+      height: 238px;
+  
+    }
+  
+    .user-bottom-img.signatureUpload-img img {
+  
+      height: 168px;
+  
+    }
+    .user-bottom-img.fno-img img {
+      height: 181px;
+    }
+    .user-bottom-img.subcriptionPack-img img {
+      height: 249px;
+    }
+    
+  }

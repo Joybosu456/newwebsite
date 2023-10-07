@@ -1,0 +1,368 @@
+.personal-detail {
+  &-info {
+    padding: 18px 28px 28px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.08);
+
+    @include breakpoint(desktop-medium) {
+      padding: 12px 28px 28px 18px;
+    }
+
+    @include breakpoint(desktop-base) {
+      padding: 16px 25px 25px;
+    }
+
+    @include breakpoint(ipad-max) {
+      padding: 14px 22px 22px;
+    }
+
+    @include breakpoint(mobile-max) {
+      padding: 13px 16px 28px;
+    }
+
+    label {
+      max-width: max-content;
+      position: relative;
+    }
+
+    .personal-input {
+      // position: absolute;
+      // inset: 0;
+      // opacity: 0;
+      // cursor: pointer;
+      // z-index: 2;
+      display: none;
+
+      // visibility: hidden;
+      // position: absolute;
+      &:checked+.form-card {
+        background: $blue;
+
+        .card-title,
+        .income-card-text {
+          color: $white;
+        }
+      }
+    }
+
+    &-text {
+      font-family: $font-poppins;
+      font-size: 14px;
+      margin-bottom: 8px;
+      font-weight: 500;
+      color: $violet;
+    }
+  }
+
+  .dual-block {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 44px;
+    column-gap: 25px;
+    row-gap: 20px;
+    flex-wrap: wrap;
+
+    column-gap: 25px;
+    row-gap: 20px;
+    flex-wrap: wrap;
+
+    &.additional-segment {
+      .dual-block-card {
+        width: unset;
+        height: unset;
+        padding: 10px 20px;
+        text-align: center;
+      }
+    }
+
+    @include breakpoint(desktop-medium) {
+      margin-bottom: 28px;
+    }
+
+    &-card {
+      width: 89px;
+      height: 89px;
+      background-color: $light-blue;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 6px;
+      padding: 10px;
+      cursor: pointer;
+
+      @include breakpoint(mobile-screen) {
+        width: 74px;
+        height: 68px;
+      }
+
+      @include breakpoint(mobile-screen) {
+        width: 74px;
+        height: 68px;
+      }
+
+      .card-img-wrapper {
+        min-height: 42px;
+        display: grid;
+        place-items: center;
+
+        @include breakpoint(mobile-screen) {
+          min-height: 32px;
+        }
+
+        @include breakpoint(mobile-screen) {
+          min-height: 32px;
+        }
+
+        img {
+          max-height: 42px;
+          object-fit: contain;
+          max-width: 50px;
+
+          @include breakpoint(mobile-screen) {
+            max-height: 32px;
+
+            @include breakpoint(mobile-screen) {
+              max-height: 32px;
+            }
+          }
+        }
+      }
+
+      .card-title {
+        font-family: $font-poppins;
+        font-size: 14px;
+        font-weight: 400;
+        color: $violet;
+        margin: 0;
+
+        @include breakpoint(desktop-medium) {
+          font-size: 12px;
+        }
+      }
+    }
+
+    .gender-block {
+      .gender-info {
+        display: flex;
+        gap: 24px;
+        flex-wrap: wrap;
+        position: relative;
+
+        @include breakpoint(mobile-screen) {
+          gap: 12px;
+        }
+
+        flex-wrap: wrap;
+        position: relative;
+
+        @include breakpoint(mobile-screen) {
+          gap: 12px;
+        }
+      }
+    }
+  }
+
+  .income {
+    margin-bottom: 20px;
+
+    @include breakpoint(desktop-medium) {
+      margin-bottom: 15px;
+    }
+
+    .row {
+      margin-left: -4px;
+      margin-right: -4px;
+
+      >* {
+        padding-left: 4px;
+        padding-right: 4px;
+
+        @include breakpoint(small-screen) {
+          width: 100%;
+        }
+      }
+    }
+
+    label {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    .row {
+      margin-left: -4px;
+      margin-right: -4px;
+
+      >* {
+        padding-left: 4px;
+        padding-right: 4px;
+
+        @include breakpoint(small-screen) {
+          width: 100%;
+        }
+      }
+    }
+
+    label {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    &-card {
+      background-color: $light-blue;
+      display: flex;
+      padding: 10px 8px;
+      gap: 7.3px;
+      align-items: center;
+      border-radius: 8px;
+      margin-bottom: 16px;
+
+      @include breakpoint(desktop-medium) {
+        margin-bottom: 10px;
+      }
+
+      img {
+        width: 30px;
+        object-fit: contain;
+
+        @include breakpoint(desktop-medium) {
+          width: 30px;
+          object-fit: contain;
+        }
+
+        @include breakpoint(desktop-base) {
+          width: 27px;
+        }
+
+        @include breakpoint(ipad-max) {
+          width: 25px;
+        }
+
+        @include breakpoint(extra-small-screen) {
+          gap: 2.5px;
+        }
+
+        // @include breakpoint(desktop-base) {
+        //   width: 27px;
+        // }
+        // @include breakpoint(ipad-max) {
+        //   width: 25px;
+        // }
+      }
+
+      &-text {
+        margin: 0;
+        font-family: $font-poppins;
+        font-size: 14px;
+        font-weight: 400;
+        color: $violet;
+
+        @include breakpoint("desktop-medium") {
+          font-size: 12px;
+          white-space: nowrap;
+        }
+
+        @include breakpoint("extra-small-screen") {
+          font-size: 8px;
+        }
+      }
+    }
+
+    .fatherPersonal {
+      height: 100%;
+      width: 100%;
+      display: block;
+      /* line-height: 2; */
+      font-size: 14px;
+      padding: 0 10px;
+      background: transparent !important;
+      border: none;
+    }
+  }
+
+  .nominee {
+    display: flex;
+    justify-content: space-between;
+
+    @include breakpoint(mobile-max) {
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    @include breakpoint(mobile-max) {
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    &-left {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &-input {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      position: relative;
+
+      .switch {
+        .slider {
+          &::after {
+            content: "No";
+            position: absolute;
+            left: calc(100% + 12px);
+            height: 100%;
+            display: inline-block;
+            margin: 0;
+            font-family: $font-poppins;
+            font-weight: 400;
+            font-size: 14px;
+            color: $dark-gray;
+          }
+        }
+
+        .input-check:checked~.slider::after {
+          content: "Yes";
+        }
+      }
+
+      p {
+        margin: 0;
+        font-family: $font-poppins;
+        font-weight: 400;
+        font-size: 14px;
+        color: $dark-gray;
+        display: none;
+        display: none;
+      }
+    }
+  }
+}
+
+.modal-content .knowMore-main {
+  //background-color: azure !important;
+  margin: 5px !important;
+  padding: 5px !important;
+  // border: 1px solid  rgb(34, 226, 226);
+  // border-radius: 5px;
+}
+
+.knowMore-pointer {
+  cursor: pointer;
+  color: #0072bc;
+  left: 100px;
+  position: absolute;
+  font-size: 14px;
+  top: 0;
+  font-weight: 500;
+}
+
+.knowMore-pointer:hover {
+  cursor: pointer;
+  color: #0072bc;
+}
+
+/* stylelint-disable indentation */

@@ -1,0 +1,60 @@
+.new-icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    stroke-width: 0;
+    stroke: currentColor;
+    fill: currentColor;
+    cursor: pointer;
+  }
+  
+  /* ==========================================
+  Single-colored icons can be modified like so:
+  .new-icon-name {
+    font-size: 32px;
+    color: red;
+  }
+  ========================================== */
+  
+  .new-icon-pause {
+    width: 0.7060546875em;
+  }
+  
+  .new-icon-play {
+    width: 0.8125em;
+  }
+  
+  .new-icon-left_refresh {
+    width: 0.849609375em;
+  }
+  
+  .new-icon-right_refresh {
+    width: 0.849609375em;
+  }
+  
+  .new-icon-Headset {
+    width: 1.1865234375em;
+  }
+  
+  .new-icon-Mute {
+    width: 0.8984375em;
+  }
+  
+  .new-icon-Unmute {
+    width: 0.64453125em;
+  }
+  .new-icon-left-arrow{
+    font-size: 14px;
+    fill: $blue;
+  }
+  .new-icon-minus{
+    font-size: 15px;
+  }
+  .new-icon-delete{
+    font-size: 14px;
+    fill: $red;
+  }
+  .new-icon-download{
+    font-size: 14px;
+    fill: $blue;
+  }

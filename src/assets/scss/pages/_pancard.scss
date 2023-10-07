@@ -1,0 +1,60 @@
+.pancard {
+
+  .page {
+    &-title {
+      margin-bottom: 5px;
+      line-height: 24px;
+    }
+
+    &-subtitle {
+      margin-bottom: 5px;
+    }
+  }
+
+  .page-bottom-img {
+    width: 180px;
+  }
+
+  .points-remember-wrapper {
+    li .remember-points {
+      @include breakpoint(desktop-base) {
+        font-size: 12px;
+      }
+    }
+  }
+
+  .form-tip {
+    margin: -10px 0 10px -10px;
+
+    @include breakpoint(mobile-max) {
+      display: none;
+    }
+
+    .form-tip-label {
+      @include breakpoint(desktop-base) {
+        font-size: 13px;
+      }
+    }
+  }
+
+  .form-tip-mobile {
+    display: none;
+
+    @include breakpoint(mobile-max) {
+      display: block;
+      margin: 0;
+    }
+  }
+
+  .common-btn {
+    @include breakpoint(ipad-max) {
+      margin-top: 20px;
+    }
+  }
+}
+
+.page-wrapper {
+  @include breakpoint(ipad-max) {
+    padding: 15px 0 20px 0;
+  }
+}

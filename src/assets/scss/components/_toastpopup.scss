@@ -1,0 +1,63 @@
+.toastpopup{
+    max-width: 260px;
+    width: 100%;
+    background-color: $light-lime-green;
+    height: 63px;
+    border-radius: 12px;
+    padding: 10px 15px;
+    position: fixed;
+    right: -100%;
+    top: 0;
+    border: 1px solid $dark-green;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    transition: right 0.5s ease; 
+     
+    .close{
+        float: right;
+        position: unset;
+
+        i{
+            font-size: 12px;
+        }
+    }
+
+    .toast-msg{
+        color: $black;
+        font-size: 14px;
+    }
+
+    &.show{
+        right: 20px;
+        top: 100px;
+        z-index: 99;
+    }
+}
+
+.toastbtn{
+    background-color: $light-yellow;
+    color: $white;
+    font-size: 14px;
+    border-radius: 12px;
+    padding: 5px 20px;
+}
+
+
+.landing-bottom-html .customaccordion{
+    margin-bottom: 100px;
+}
+
+.customaccordion{
+
+    .accordion-item{
+        border-radius: 12px;
+        border: 1px solid;
+        transition: height 0.5s ease-out;
+
+    }
+
+    .accordion-body{
+        background-color: aqua;
+        height: 0;
+        transition: height 0.5s ease-out;
+    }
+}

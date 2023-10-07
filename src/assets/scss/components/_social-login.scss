@@ -1,0 +1,38 @@
+.social-list {
+  ul {
+    li {
+      a {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        // display: inline-block;
+
+        @include breakpoint(mobile-screen){
+          gap: 8px;
+        }
+
+        @include breakpoint(small-screen){
+          display: block;
+        }
+        button {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          opacity: 0;
+          background-color: transparent !important;
+          box-shadow: none !important;
+          @include hover-focus-active {
+            background-color: transparent;
+          }
+          & > * {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

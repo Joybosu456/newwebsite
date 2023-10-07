@@ -1,0 +1,2 @@
+// eslint-disable-next-line no-unused-expressions
+import $ from"jquery";window.onbeforeunload=function(){localStorage.clear()},$(document).ready((function(){$(".suggest_text a").click((function(){$(".overlay").hide()}))})),$(document).on("click",(function(){$(".form-control").blur((function(){$(this).val();$(this).addClass("has-value")})),$(".otp-btn").click((function(){$(this).parent("form").find(".form-control").removeClass("has-value")}))}));

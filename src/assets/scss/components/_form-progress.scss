@@ -1,0 +1,146 @@
+.form-progress {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 40px;
+  border-top: 4px solid #bee6bb;
+  // position: relative;
+  // top: 0;
+  position: fixed;
+  top: 71px;
+  z-index: 1000;
+  width: 100%;
+  padding: 0 100px;
+  background-color: #f2f7ff;
+  @include breakpoint("ipad-max") {
+    height: 10px;
+  }
+  @include breakpoint(mobile-screen) {
+    top: 64px;
+  }
+
+  @include breakpoint(small-screen) {
+    top: 59px;
+  }
+
+  // for progress bar
+  &::before {
+    content: "";
+    position: absolute;
+
+    top: -4px;
+    left: 0px;
+    height: 4px;
+    background-color: $green;
+  }
+
+  // for progress dot
+
+  &::after {
+    content: "";
+    position: absolute;
+    background: url("../images/gif/progress-dot.gif") center;
+    background-size: 100%;
+    height: 40px;
+    width: 40px;
+    top: -20px;
+    @include breakpoint("mobile-screen") {
+      height: 30px;
+      width: 30px;
+      top: -17px;
+    }
+  }
+
+  &-item {
+    position: relative;
+    flex: 1;
+    text-align: center;
+    padding-top: 15px;
+    font-size: 12px;
+    color: $very-light-gray;
+    @include breakpoint("ipad-max") {
+      display: none;
+    }
+    &.active {
+      color: $violet;
+    }
+  }
+}
+
+.personal-details {
+  @include form-progress(calc(20% - 20px));
+
+  @include breakpoint("desktop-base") {
+    @include form-progress(20%);
+  }
+}
+
+.bank-details {
+  @include form-progress(calc(40% - 10px));
+  // desktop
+  @include breakpoint("desktop-base") {
+    @include form-progress(40%);
+  }
+}
+
+.payment {
+  @include form-progress(calc(60%));
+}
+
+.document-upload {
+  @include form-progress(calc(80% + 30px));
+
+  @include breakpoint("desktop-medium") {
+    @include form-progress(calc(80% + 20px));
+  }
+
+  @include breakpoint("desktop-base") {
+    @include form-progress(calc(80%));
+  }
+}
+
+.form-progress + .main-content {
+  padding: 40px 0 0px 0;
+  @include breakpoint("ipad-max") {
+    padding: 20px 0 0px 0;
+  }
+}
+
+// form progress tooltip
+
+.progress-tooltip {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  height: 45px;
+  width: fit-content;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background-color: $white;
+  box-shadow: 0px 2px 12px 0px #c0c0c040;
+  &::before {
+    content: url("../images/tooltip-polygon.svg");
+    position: absolute;
+    margin: 0 auto;
+    top: -20px;
+    left: 0;
+    right: 0;
+    z-index: -1;
+  }
+  img {
+    height: 18px;
+    width: 18px;
+  }
+  span {
+    display: block;
+    text-align: left;
+    font-size: 10px;
+    color: $light-gray;
+    &:first-child {
+      color: $tooltip-gray;
+      margin-bottom: 4px;
+    }
+  }
+}

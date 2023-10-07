@@ -1,0 +1,231 @@
+.chat-card {
+  max-width: 360px;
+  width: 100%;
+  // padding-bottom: 30px;
+  margin-top: 50px;
+  margin-left: auto;
+  overflow: hidden;
+  // z-index: 99;
+
+  @include breakpoint(ipad-max) {
+    max-width: auto;
+    padding: 0;
+    margin: 0;
+    z-index: 5;
+  }
+
+  .user {
+    display: block;
+    object-fit: contain;
+    width: 70px;
+    margin-left: auto;
+    margin-right: 10px;
+    margin-top: 5px;
+    pointer-events: none;
+
+
+    @include breakpoint(ipad-max) {
+      position: fixed;
+      top: 65px;
+      right: 18px;
+      width: 58px;
+      pointer-events:visible;
+    }
+
+    @include breakpoint(extra-small-screen) {
+      width: 50px;
+    }
+  }
+
+  &-header {
+    // padding-bottom: 16px;
+    // margin-bottom: 16px;
+    // border-bottom: 1px solid #707e92;
+
+    // @include breakpoint(ipad-max) {
+    //   padding-bottom: 20px;
+    // }
+
+    .close {
+      display: none;
+
+      @include breakpoint(ipad-max) {
+        display: block;
+      }
+    }
+
+    .chat {
+      &-title {
+        font: 500 16px $primary-font;
+        margin-bottom: 8px;
+        color: $violet;
+      }
+
+      &-subtitle {
+        font: 400 16px $primary-font;
+        color: $violet;
+
+        @include breakpoint(ipad-max) {
+          font-size: 15px;
+        }
+      }
+
+      &-link{
+        span{
+          color: $violet;
+          font-size: 12px;
+          font-weight: 400;
+
+          a{
+            color: #008eff;
+            text-decoration: underline;
+            
+          }
+        }
+      }
+
+      &-link-divider{
+      margin: 0 5px;
+      }
+    }
+  }
+
+  &-footer {
+    font: 400 14px $primary-font;
+    color: $violet;
+    margin-top: 10px;
+
+    @include breakpoint(ipad-max) {
+      font-size: 13px;
+    }
+
+    button {
+      background: none;
+      color: $blue;
+      display: block;
+    }
+  }
+
+  .dashed-border {
+    padding: 16px 32px 16px 16px;
+    background: #f9fcff;
+    border: 1px dashed #002356;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);
+    border-radius: 8px 8px 0 8px;
+    position: relative;
+
+    @include breakpoint(ipad-max) {
+      position: fixed;
+      top: 250px;
+      transform: translateY(-50%);
+      // left: 0;
+      right: 28px;
+      width: 65%;
+      margin: 0 auto;
+      // z-index: 111;
+      border-radius: 8px;
+      display: none;
+      padding: 16px 32px 16px 16px;
+    }
+
+    @include breakpoint(mobile-screen) {
+      width: 90%;
+      // top: 265px;
+      transform: translateY(0px);
+      top: 140px;
+    }
+
+    &::after {
+      content: "";
+      background: #f9fcff;
+      width: 29px;
+      height: 50px;
+      display: block;
+      position: absolute;
+      bottom: -18px;
+      z-index: 0;
+      right: -20px;
+      border-radius: 0px 0px 2px 1px;
+      border: 1px dashed #002356;
+      border-left: 0;
+      transform: rotate(45deg);
+
+      @include breakpoint(ipad-max) {
+        // display: none;
+        width: 26px;
+        height: 27px;
+        top: -14px;
+        right: 17px;
+        bottom: unset;
+        border-left: 0;
+        border-top: 0;
+        transform: rotate(224deg);
+      }
+      
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -17px;
+      right: -1px;
+      width: 0px;
+      height: 40px;
+      border-right: 1px dashed #002356;
+      z-index: 5;
+
+      @include breakpoint(ipad-max) {
+        display: none;
+      }
+    }
+  }
+
+  .close-icon {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 12px;
+    font-weight: 500;
+  }
+}
+
+.contact-us {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-around;
+
+  gap: 15px;
+
+  margin: 0;
+
+}
+
+.contact-us ul li img {
+  width: 32px;
+
+  object-fit: contain;
+
+  cursor: pointer;
+}
+
+.contact-us .modal-dialog {
+  // max-width: 15% !important;
+  margin: 0 auto;
+  width: fit-content;
+
+  left: 310px;
+
+  @include breakpoint(ipad-max) {
+    left: 200px;
+  }
+
+   @include breakpoint(mobile-screen) {
+      // max-width: 40% !important;
+      left: auto;
+    }
+}
+.contact-us a.tip:hover span {
+  left: -40px;
+}

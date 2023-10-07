@@ -1,0 +1,112 @@
+/*font family*/
+$primary-font: "Rubik";
+$font-poppins: "Poppins";
+
+// path
+$img-path: "../images";
+$fonts-path: "../fonts";
+$icomoon-font-family: "icomoon" !default;
+$icomoon-font-path: "../fonts/icomoon" !default;
+
+/*color*/
+$black: #000000;
+$white: #ffffff;
+
+$grayish-black: #333333;
+$tooltip-gray: #303030;
+$very-dark-gray: #3e3e3e;
+$dark-gray: #535658;
+$least-dark-gray: #707070;
+$gray: #737373;
+$least-light-gray: #666666;
+$light-gray: #606060;
+$medium-light-gray: #75787b;
+$medium-gray: #8a8a8a;
+$lightest-gray: #8d8d8d;
+$least-lightest-gray: #999999;
+$very-light-gray: #9e9e9e;
+$most-lightest-gray: #bcbcbc;
+$darkest-silver: #efefef;
+
+$lightest-silver: #f5f5f5;
+$light-silver: #f7f7f7;
+$silver: #e0e0e0;
+$dark-silver: #e2e2e2;
+$very-dark-silver: #ececec;
+$most-dark-silver: #d9d9d9;
+$most-dark-gray: #d9d9d9;
+
+$rgba-1: #b5d4e380;
+$rgba-2: #ffffffc7;
+$rgba-3: #51c9eb33;
+
+$light-blue-gradient: linear-gradient(
+  90deg,
+  #ddfbfe 5.19%,
+  #dafcff 5.2%,
+  rgba(237, 248, 249, 0.87) 49.61%,
+  #ddfbfe 88.8%
+);
+
+$dark-blue-gradient: linear-gradient(180deg, #0072bb 0%, #002356 100%);
+$green-gradient: linear-gradient(269.98deg, #2bb81f -0.06%, #3acd2d 99.98%);
+
+$lightest-yellow: #ffdc9e;
+$light-yellow: #ffdc5d;
+$yellow: #ffa300;
+$orange: #ff5500;
+$orange1:#F15D39;
+$red: #e9282a;
+$pink: #fb6c70;
+$light-pink: #ffebc8;
+
+// green shades
+$lightest-green: #47e489;
+$light-green: #72b959;
+$light-lime-green: #bee6bb;
+$lime-green: #02af1e;
+$green: #2cb742;
+$dark-green: #35ae44;
+
+// blue shades
+$faded-blue: #f9fcff;
+$grayish-blue: #707e92;
+$light-sky-blue: #ceecff;
+$sky-blue: #b8d3ff;
+$lightest-blue: #e3f4ff;
+$light-blue: #f2f7ff;
+$blue: #0072bc;
+$dark-blue: #2262b1;
+$strong-blue: #1f66b4;
+$bright-blue: #216bdb;
+$violet: #002356;
+$panbg: #bdb4ea;
+$violet1:#0F2044;
+
+$primary-border: 1px solid $violet;
+
+
+// icons
+
+$icon-search: "\e900";
+$icon-tick: "\e901";
+$icon-minus: "\e902";
+$icon-add: "\e903";
+$icon-close: "\e904";
+$icon-delete: "\e905";
+$icon-mute: "\e906";
+$icon-speaker: "\e907";
+$icon-download: "\e908";
+$icon-Headset: "\e909";
+$icon-left-arrow: "\e90a";
+$icon-Mute: "\e90b";
+$icon-right-arrow: "\e90c";
+$icon-Unmute: "\e90d";
+$icon-clock: "\e90e";
+$icon-pause: "\e913";
+$icon-play: "\e912";
+$icon-left_refresh: "\e911";
+$icon-right_refresh: "\e910";
+
+
+

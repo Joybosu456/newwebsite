@@ -1,0 +1,40 @@
+#time_progress-bar {
+    width: 193px;
+    margin: 45px auto;
+    transform: translateX(-25%);
+    height: 6px;
+    border-radius: 50px;
+    background-color: $very-dark-silver;
+    position: relative;
+
+    @include breakpoint(mobile-screen){
+      margin: 35px auto;
+      width: 170px;
+    }
+
+    @include breakpoint(extra-small-screen){
+      width: 130px;
+    }
+  }
+  
+  #time_progress-bar .bar {
+    height: 6px;
+    text-align: right;
+    padding: 0;
+    width: 0;
+    background-color: $yellow;
+    box-sizing: border-box;
+    border-radius: 50px;
+  }
+  #time_progress-bar{
+    .bar{
+      span{
+        position: absolute;
+        font-size: 10px;
+        line-height: 12px;
+        color: $gray;
+        right: -90px;
+        top: -3px;
+      }
+    }
+  }

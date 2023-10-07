@@ -1,0 +1,328 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  outline: none;
+}
+
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+ -webkit-user-select: none;
+  user-select: none;
+  @include breakpoint(mobile-max) {
+    height: 100%;
+  }
+}
+
+body {
+  font-family: $primary-font;
+  // background-image: url(../images/main-bg.svg);
+  // background-size: cover;
+  // background-position: center left;
+  min-height: 100vh;
+  position: relative;
+  background-color: $light-blue;
+
+  @include breakpoint(mobile-max) {
+    height: 100%;
+    background-image: none;
+    background-color: $light-blue;
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: 0 135%;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+p,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  outline: 0;
+  border: 0;
+}
+
+.h-md-100 {
+  height: 100% !important;
+
+  @include breakpoint(ipad-max) {
+    height: auto !important;
+  }
+}
+
+.h-md-100 {
+  height: 100% !important;
+
+  @include breakpoint(ipad-max) {
+    height: auto !important;
+  }
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+  width: 50px;
+  cursor: pointer;
+  background-image: url(../images/calender.svg);
+  background-repeat: no-repeat;
+  background-position: 95% center;
+}
+
+input[type="date"]:required:invalid::-webkit-datetime-edit {
+  color: transparent;
+}
+
+input[type="date"]:focus::-webkit-datetime-edit {
+  color: black;
+}
+
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+  width: 50px;
+  cursor: pointer;
+  background-image: url(../images/calender.svg);
+  background-repeat: no-repeat;
+  background-position: 95% center;
+}
+
+input[type="date"]:required:invalid::-webkit-datetime-edit {
+  color: transparent;
+}
+
+input[type="date"]:focus::-webkit-datetime-edit {
+  color: black;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.main-content {
+  min-height: calc(100vh - 71px);
+  position: relative;
+  padding: 40px 0 0px 0;
+  // z-index: 0;
+
+  @include breakpoint(ipad-max) {
+    padding: 18px 10px;
+  }
+
+  @include breakpoint(mobile-screen) {
+    height: auto;
+  }
+}
+
+.common-btn {
+  color: $white;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  background-color: $orange;
+  border: 1px solid $orange;
+  border-radius: 8px;
+  transition: all 0.5s ease;
+  padding: 11px 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 9px;
+  cursor: pointer;
+
+  i {
+    font-size: 15px;
+    margin-right: 8px;
+  }
+
+  &:hover {
+    background-color: $orange1;
+    // color: $orange;
+  }
+
+  @include breakpoint(desktop-large) {
+    padding: 10px 23px;
+    font-size: 14px;
+
+    i {
+      font-size: 18px;
+    }
+  }
+
+  @include breakpoint(desktop-small) {
+    padding: 12px 20px;
+    font-size: 14px;
+
+    i {
+      font-size: 16px;
+    }
+  }
+
+  @include breakpoint(mobile-screen) {
+    i {
+      font-size: 15px;
+    }
+  }
+
+  @include breakpoint(small-screen) {
+    padding: 10px 12px;
+    font-size: 12px;
+    margin-right: 5px;
+
+    i {
+      font-size: 16px;
+    }
+  }
+
+  @include breakpoint(mobile-screen) {
+    i {
+      font-size: 15px;
+    }
+  }
+
+  @include breakpoint(small-screen) {
+    padding: 10px 12px;
+    font-size: 12px;
+    margin-right: 5px;
+
+    i {
+      font-size: 14px;
+    }
+  }
+}
+
+.secondary-btn {
+  color: $violet;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  display: inline-block;
+  background-color: $white;
+  border: 1px solid $violet;
+  border-radius: 8px;
+  transition: all 0.5s ease;
+  padding: 11px 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  i {
+    font-size: 18px;
+    margin-right: 8px;
+  }
+
+  &:hover {
+    background-color: $violet;
+    color: $white;
+  }
+
+  @include breakpoint(desktop-large) {
+    padding: 10px 23px;
+    font-size: 14px;
+
+    i {
+      font-size: 16px;
+    }
+  }
+
+  @include breakpoint(desktop-small) {
+    padding: 8px 20px;
+    font-size: 14px;
+
+    i {
+      font-size: 12px;
+    }
+  }
+
+  @include breakpoint(mobile-screen) {
+    padding: 12px 20px;
+    width: 48%;
+    font-size: 12px;
+
+    i {
+      font-size: 13px;
+    }
+  }
+
+  @include breakpoint(small-screen) {
+    padding: 10px 12px;
+    width: 48%;
+    font-size: 12px;
+
+    i {
+      font-size: 14px;
+    }
+  }
+}
+
+.text-left {
+  text-align: left !important;
+}
+
+.page-full {
+  height: auto;
+
+  .main-content {
+    height: auto;
+    padding: 50px 0;
+  }
+}
+
+.desktop-none {
+  display: none;
+
+  @include breakpoint(mobile-max) {
+    display: block;
+  }
+}
+
+.mobile-none {
+  display: block;
+
+  @include breakpoint(mobile-max) {
+    display: none !important;
+  }
+}
+
+.error {
+  color: red;
+}
+
+:disabled {
+  background-color: $most-lightest-gray !important;
+  // border: 0 !important;
+  cursor: no-drop;
+}
+
+.bank-detail-content :disabled {
+  background-color: #fff !important;
+  cursor: no-drop;
+}
+
+.position-inherit {
+  @include breakpoint("ipad-max") {
+    position: inherit;
+  }
+}

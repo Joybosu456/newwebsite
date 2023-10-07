@@ -1,0 +1,108 @@
+$breakpoints: (
+  "extra-small-screen": (
+    max-width: 350px,
+  ),
+  "small-screen": (
+    max-width: 375px,
+  ),
+  "mobile-screen": (
+    max-width: 575px,
+  ),
+  "mobile-max": (
+    max-width: 767px,
+  ),
+  "ipad-max": (
+    max-width: 991px,
+  ),
+  "desktop-base": (
+    max-width: 1199px,
+  ),
+  "desktop-small": (
+    max-width: 1280px,
+  ),
+  "desktop-medium": (
+    max-width: 1366px,
+  ),
+  "desktop-large": (
+    max-width: 1440px,
+  ),
+  "desktop-xl": (
+    max-width: 1600px,
+  ),
+  "desktop-xxl": (
+    max-width: 1920px,
+  ),
+  "mac-1920": (
+    min-width: 1921px,
+  ),
+);
+
+@mixin breakpoint($name) {
+  @if map-has-key($breakpoints, $name) {
+    @media #{inspect(map-get($breakpoints, $name))} {
+      @content;
+    }
+  } @else {
+    @warn "Couldn't find a breakpoint named `#{$name}`.";
+  }
+}
+
+/* Placeholder css property */
+@mixin placeholder {
+  &::placeholder {
+    @content;
+  }
+
+  &:-ms-input-placeholder {
+    @content;
+  }
+
+  &::-ms-input-placeholder {
+    @content;
+  }
+}
+
+/* fadeIn and fadeOut css property end */
+/* hover, focus, active css property Begin */
+@mixin hover {
+  &:hover {
+    @content;
+  }
+}
+
+@mixin focus {
+  &:focus {
+    outline: 2px dashed transparent;
+    @content;
+  }
+}
+
+@mixin hover-focus {
+  &:hover,
+  &:focus {
+    @content;
+  }
+}
+
+@mixin hover-focus-active {
+  &:hover,
+  &:focus,
+  &.active {
+    @content;
+  }
+}
+
+%center-element {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin form-progress($width) {
+  &::before {
+    width: $width;
+  }
+  &::after {
+    left: calc($width - 20px);
+  }
+}

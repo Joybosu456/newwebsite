@@ -1,0 +1,225 @@
+.upload-docs {
+  display: flex;
+  align-items: center;
+  @include breakpoint("mobile-screen") {
+    flex-direction: column;
+  }
+  @include breakpoint("mobile-screen") {
+    flex-direction: column;
+  } 
+  &__card {
+    width: 224px;
+    flex-direction: column;
+    @extend %center-element;
+    width: 224px;
+    flex-direction: column;
+    @extend %center-element;
+    position: relative;
+    background-color: $white;
+    border: $primary-border;
+    border-radius: 12px;
+    padding: 20px 10px 17px;
+    cursor: pointer;
+    @include breakpoint("mobile-screen") {
+      width: 100%;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+    @include breakpoint("small-screen") {
+      padding: 15px 10px;
+    }
+    @include breakpoint("mobile-screen") {
+      width: 100%;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+    @include breakpoint("small-screen") {
+      padding: 15px 10px;
+    }
+    // card-img
+    &__img {
+      height: 70px;
+      margin-bottom: 12px;
+      width: 73px;
+      @include breakpoint("mobile-screen") {
+        height: 55px;
+        width: 55px;
+        margin-right: 10px;
+        margin-bottom: 0;
+      }
+      @include breakpoint("small-screen") {
+        height: 47px;
+        width: 47px;
+      }
+      width: 73px;
+      @include breakpoint("mobile-screen") {
+        height: 55px;
+        width: 55px;
+        margin-right: 10px;
+        margin-bottom: 0;
+      }
+      @include breakpoint("small-screen") {
+        height: 47px;
+        width: 47px;
+      }
+    }
+    &__title {
+      color: $grayish-black;
+      font: 500 16px $primary-font;
+      margin-bottom: 12px;
+      @include breakpoint("mobile-screen") {
+        margin-bottom: 4px;
+        font-size: 14px;
+      }
+      @include breakpoint("small-screen") {
+        font-size: 12px;
+      }
+      @include breakpoint("mobile-screen") {
+        margin-bottom: 4px;
+        font-size: 14px;
+      }
+      @include breakpoint("small-screen") {
+        font-size: 12px;
+      }
+    }
+    &__details {
+      text-align: center;
+      color: $least-dark-gray;
+      font: 400 16px $primary-font;
+      margin-bottom: 12px;
+      @include breakpoint("mobile-screen") {
+        font-size: 14px;
+        margin-bottom: 4px;
+        text-align: left;
+        max-width: 85%;
+      }
+      @include breakpoint("small-screen") {
+        font-size: 12px;
+      }
+      @include breakpoint("mobile-screen") {
+        font-size: 14px;
+        margin-bottom: 4px;
+        text-align: left;
+        max-width: 85%;
+      }
+      @include breakpoint("small-screen") {
+        font-size: 12px;
+      }
+    }
+    &__time {
+      color: $dark-blue;
+      font: 400 12px $primary-font;
+      display: flex;
+      align-items: center;
+      column-gap: 6px;
+      @include breakpoint("mobile-screen") {
+        position: absolute;
+        right: 10px;
+        bottom: 5px;
+        column-gap: 3px;
+        font-size: 10px;
+      }
+      @include breakpoint("mobile-screen") {
+        position: absolute;
+        right: 10px;
+        bottom: 5px;
+        column-gap: 3px;
+        font-size: 10px;
+      }
+    }
+    // message
+    .suggestion-msg {
+      left: 0;
+      top: auto;
+      bottom: -30px;
+      right: auto;
+      transform: unset;
+    }
+  }
+  .OR {
+    color: $medium-light-gray;
+    text-transform: uppercase;
+    font: 400 20px $primary-font;
+    margin: 0 16px;
+    position: relative;
+    @include breakpoint("mobile-screen") {
+      margin: 36px 0 18px;
+      font-size: 16px;
+      border: 1px solid $dark-silver;
+      border-radius: 50%;
+      padding: 5px;
+    }
+    @include breakpoint("small-screen") {
+      font-size: 12px;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: 100px;
+      height: 1px;
+      z-index: -1;
+      background-color: $dark-silver;
+    }
+    &::before {
+      left: -101px;
+    }
+    &::after {
+      right: -101px;
+    }
+  }
+}
+
+.upload-docs__card.uploadDG{
+  // display: none;
+}
+
+.payment-title {
+  @include breakpoint("small-screen") {
+    align-items: flex-start !important;
+  }
+}
+
+.document-upload-content{
+  display: flex;
+  margin-left: 55px;
+
+  @include breakpoint(mobile-screen){
+    margin-left: 0;
+  }
+
+  .payment-title{
+    position: relative;
+  }
+
+  .tick-gif{
+    position: absolute;
+    left: -62px;
+    top:0;
+
+    @include breakpoint(mobile-screen){
+      left: unset;
+      right: 0;
+      top: 14px;
+    }
+  }
+}
+
+
+
+.react-select-fno {
+  margin: 12px 0;
+
+.react-select-dropdown{
+  width: 100%;
+  max-width: 490px;
+
+  @include breakpoint(mobile-max){
+    max-width: 100%;
+  }
+}
+}

@@ -1,0 +1,82 @@
+.camera-page {
+  padding-top: 60px;
+  @include breakpoint("mobile-max") {
+    padding-top: 30px;
+  }
+  .camera-not-found {
+    margin-top: 25px;
+    .common-card {
+      max-width: 525px;
+      @include breakpoint("desktop-base") {
+        padding: 24px 28px;
+      } 
+      @include breakpoint("mobile-max") {
+        padding: 20px;
+      }
+
+      .title {
+        color: $violet;
+        font: 400 22px $primary-font;
+        margin-bottom: 8px;
+        @include breakpoint("desktop-medium") {
+          font-size: 20px;
+        }
+        @include breakpoint("desktop-base") {
+          font-size: 18px;
+        }
+        @include breakpoint("small-screen") {
+          font-size: 16px;
+        }
+      }
+      .details {
+        color: $violet;
+        font: 400 22px $primary-font;
+        margin-bottom: 20px;
+        @include breakpoint("desktop-medium") {
+          font-size: 20px;
+          margin-bottom: 10px;
+        }
+        @include breakpoint("desktop-base") {
+          font-size: 18px;
+        }
+        @include breakpoint("small-screen") {
+          font-size: 16px;
+        }
+        span {
+          color: $orange;
+        }
+      }
+      p {
+        color: $dark-gray;
+        font-size: 16px;
+        @include breakpoint("desktop-base") {
+          font-size: 14px;
+        }
+        @include breakpoint("mobile-max") {
+          font-size: 12px;
+        }
+        a {
+          color: $blue;
+        }
+      }
+      .common-btn {
+        margin-top: 20px;
+        margin-bottom: 10px;
+        @include breakpoint("desktop-medium") {
+          margin-top: 10px;
+        }
+        @include breakpoint("desktop-base") {
+          font-size: 12px;
+        }
+        @include breakpoint("mobile-screen") {
+          padding: 5px 15px;
+        }
+      }
+    }
+  }
+  .user-bottom-img {
+    img {
+      height: 326px;
+    }
+  }
+}

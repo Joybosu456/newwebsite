@@ -1,0 +1,144 @@
+// signature
+.signature {
+  .page-bottom-img {
+    width: 180px;
+  }
+ 
+
+  .page {
+    &-title {
+      margin-bottom: 13px;
+      // line-height: 20px;
+    }
+
+    &-subtitle {
+      margin-bottom: 5px;
+    }
+  }
+
+   //added by datta 04-01-2023
+   .first-view{
+    padding-top: 37px ;
+  }
+  .upload-points-section{
+    .upload-front-side{
+    // height: 228px;
+  }
+  }
+    //end 
+
+
+  .upload-img-modal {
+    .close {
+      right: 40px;
+      top: 14%;
+
+      @include breakpoint(ipad-max) {
+        top: 5%;
+      }
+
+      @include breakpoint(mobile-screen) {
+        right: 15px;
+      }
+    }
+
+    .modal-content {
+      padding: 44px 20px;
+
+      @include breakpoint(ipad-max) {
+        padding: 28px 20px;
+      }
+
+      @include breakpoint(mobile-max) {
+        padding: 20px 5px;
+      }
+    }
+
+    .modal-body {
+      .row {
+        @include breakpoint(mobile-screen) {
+          row-gap: 20px;
+        }
+      }
+
+      h3 {
+        margin-bottom: 42px;
+      }
+      .modal-title {
+        max-width: 205px;
+        margin: auto;
+      }
+    }
+  }
+
+  .form-tip-mobile {
+    display: none;
+
+    @include breakpoint(mobile-max) {
+      display: block;
+      margin: 0;
+    }
+  }
+
+  .form-tip-label {
+    @include breakpoint(desktop-base) {
+      font-size: 13px;
+    }
+
+    @include breakpoint(ipad-max) {
+      font-size: 12px;
+    }
+  }
+
+  .form-tip {
+    margin: -10px 0 10px -10px;
+
+    @include breakpoint(mobile-max) {
+      display: none;
+    }
+  }
+
+  .form-tip-mobile {
+    display: none;
+    @include breakpoint(mobile-max) {
+      display: block;
+      margin: 0;
+    }
+  }
+
+  .common-btn {
+    @include breakpoint(mobile-max) {
+      margin-top: 20px;
+    }
+  }
+}
+
+.signature-note {
+  color: $dark-gray;
+  font-weight: 400;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 15px;
+  line-height: 1.35;
+
+  @include breakpoint(mobile-screen) {
+    margin-top: 0;
+    font-size: 11px;
+  }
+
+  span {
+    color: $dark-gray;
+    font-weight: 500;
+  }
+}
+
+.fno-input{
+  display: flex;
+  align-items: center;
+  p{
+    margin-left:10px;
+    font-size:12px;
+    font-weight:400;
+    cursor: context-menu;
+  }
+}

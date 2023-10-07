@@ -1,0 +1,233 @@
+header {
+  background: $white;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  @include breakpoint(mobile-max) {
+    padding: 15px 10px;
+  }
+
+  @include breakpoint(extra-small-screen) {
+    padding: 12px 5px;
+  }
+
+  .tip {
+    margin-left: 0;
+  }
+
+  .main-logo {
+    img {
+      width: 145px;
+
+      @include breakpoint(mobile-screen) {
+        width: 120px;
+      }
+    }
+  }
+
+  .header-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .header-dropdown {
+    margin-right: 56px;
+  }
+
+  .header-list {
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+      margin: 0;
+
+      @include breakpoint(mobile-max) {
+        gap: 12px;
+      }
+
+      @include breakpoint(extra-small-screen) {
+        gap: 10px;
+      }
+
+      li {
+        img {
+          width: 28px;
+          object-fit: contain;
+        }
+
+        @include breakpoint(mobile-max) {
+          width: 25px;
+
+          img {
+            width: 100%;
+          }
+        }
+
+        @include breakpoint(extra-small-screen) {
+          width: 22px;
+        }
+      }
+    }
+  }
+
+  #LanguageSelect {
+    @include breakpoint(mobile-max) {
+      // background: yellow;
+      // width: 28px;
+      height: 28px;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      background-image: url("#{$img-path}/Language.svg");
+      background-position: 35px 0;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-color: transparent;
+      color: transparent;
+      border: 0;
+      margin:  0 !important;
+      option {
+        color: $white;
+        background: #0072bc;
+        padding-right: 30px;
+      }
+    }
+  }
+
+  .overlay {
+    top: 70px;
+    z-index: 500;
+  }
+}
+
+// .language-mob{
+//     display: none;
+
+//     @include breakpoint(mobile-max){
+//         display: block;
+//         margin-right: 15px;
+//     }
+//     @include breakpoint(extra-small-screen){
+//         width: 22px;
+
+//         img{
+//             width: 100%;
+//         }
+//     }
+// }
+
+.mailmodel,
+.callmodel,
+.whatsappmodel {
+  position: absolute;
+  background-color: $white;
+  // height: 100px;
+  max-width: 200px;
+  min-width: 200px;
+  top: 70px;
+  width: 100%;
+  display: none;
+  border-radius: 8px;
+  z-index: 99;
+  padding: 2px;
+
+  @include breakpoint(mobile-screen) {
+    width: auto;
+  }
+
+  &.call {
+    display: block;
+  }
+
+  .contact-title {
+    color: $violet;
+    text-align: center;
+    font-weight: 500;
+    font-size: 18px;
+    border-bottom: 0.6px solid $violet;
+    padding-bottom: 2px;
+    margin-bottom: 5px;
+  }
+
+  .contact-content {
+    display: flex;
+    justify-content: flex-start;
+    gap: 4px;
+
+    li {
+      display: flex;
+      align-items: center;
+      width: unset;
+
+      img {
+        height: 18px;
+        width: auto;
+        margin-right: 5px;
+      }
+    }
+  }
+
+  .contact-details {
+    position: relative;
+
+    &::after {
+      content: "";
+      background: #ffffff;
+      width: 23px;
+      height: 23px;
+      display: block;
+      position: absolute;
+      top: -12px;
+      z-index: 0;
+      right: 14px;
+      border-radius: 0px 0px 2px 1px;
+      border-left: 0;
+      transform: rotate(45deg);
+    }
+  }
+
+  .contact-name {
+    color: $grayish-black;
+    font-size: 12px;
+    font-weight: 400;
+    // padding-right: 25px;
+  }
+
+  .contact-txt {
+    color: #016aae;
+    font-weight: 500;
+    font-size: 13px;
+    padding: 0px;
+  }
+}
+
+.mailmodel {
+  right: 50px;
+  max-width: 219px;
+
+  @include breakpoint(mobile-screen) {
+    right: 2px;
+  }
+}
+
+.callmodel {
+  right: 90px;
+  max-width: 183px;
+  min-width: 183px;
+
+  @include breakpoint(mobile-screen) {
+    right: 2px;
+  }
+}
+
+.whatsappmodel {
+  right: 0;
+  max-width: 243px;
+}
+
+.z-index-1 {
+  z-index: 1;
+}

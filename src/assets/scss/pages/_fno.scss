@@ -1,0 +1,162 @@
+.fno-upload-modal {
+  .modal-dialog {
+    max-width: 51% !important;
+
+    @include breakpoint(ipad-max){
+        max-width: 70% !important;
+    }
+
+    @include breakpoint(mobile-screen){
+        max-width:90% !important;
+    }
+  }
+  .upload-doc-list-item {
+    
+    @include breakpoint(mobile-max){
+        margin-bottom: 5px;
+        border-right:none;
+        }
+    }
+}
+
+.bank-state-step-wrapper {
+  align-items: center;
+  position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 85%;
+      right: 0;
+      height: auto;
+      border-bottom: 2px dashed #126fb5;
+      margin: 0 auto;
+
+      @include breakpoint(mobile-screen){
+        border-bottom: none;
+      }
+  }
+
+  @include breakpoint(mobile-screen){
+    justify-content: center;
+    gap: 10px;
+  }
+
+  li {
+   
+    .bank-state-step {
+      border: 1px solid $pink;
+      padding: 7px;
+      border-radius: 8px;
+      position: relative;
+      z-index:2;
+      background-color: $white;
+  
+      &::after {
+          content: "";
+          position: absolute;
+          width: 6px;
+          height: 6px;
+          border-radius: 50px;
+          background-color: #126fb5;
+          left:-7px;
+          top: 49%;
+
+          @include breakpoint(mobile-screen){
+            background-color: unset;
+          }
+      }
+
+      img {
+        max-height: 242px;
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+      }
+
+    }
+    
+    &:first-child{
+      .bank-state-step {
+        &::after {      
+          background-color: unset;
+        }
+      }
+    }
+  }
+
+  &.networth-step{
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 60%;
+      right: 0;
+      height: auto;
+      border-bottom: 2px dashed #126fb5;
+      margin: 0 auto;
+
+      @include breakpoint(mobile-screen){
+        border-bottom: none;
+      }
+  }
+
+    li{
+      &:first-child{
+        .bank-state-step {
+          &::after {      
+            background-color: unset;
+          }
+        }
+      }
+    }
+   
+  }
+}
+
+.check-upload{
+
+  .cheque-img-wrapper{
+    .img-wrapper{
+      border: 1px solid $pink;
+      padding: 7px;
+      border-radius: 8px;
+      margin: 0 auto;
+      width: 100%;
+      max-width: 375px;
+      margin-bottom: 10px;
+
+      .cheque-img{
+        width: 100%;
+        object-fit: contain;
+      }
+      
+    }
+  }
+
+  .upload-doc-list {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+    padding-right: 20px;
+    margin-top: 10px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 19px;
+      top: 0;
+      height: 100%;
+      border-left: 2px dashed #126FB5;
+     } 
+
+    &-item{
+      border-right: none;
+    }
+  }
+}

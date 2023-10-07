@@ -1,0 +1,37 @@
+.dateCustom {
+    display: flex;
+
+    &-day {
+        max-width: 2.5ch;
+    }
+
+    &-month {
+        max-width: 2.5ch;
+
+    }
+
+    &-year {
+        max-width: 4.5ch;
+
+    }
+
+    input {
+        margin: 0;
+        border: none;
+
+
+    }
+
+    &-dash {
+        // border: none;
+        cursor: not-allowed;
+        max-width: 1ch;
+        text-align: left;
+        background-color: transparent !important;
+    }
+
+    .error-border-red {
+        border-bottom: 1px solid red;
+    }
+
+}

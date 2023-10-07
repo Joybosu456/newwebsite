@@ -1,0 +1,665 @@
+.subscribe {
+  // subscription packs styling
+  width: fit-content;
+  position: relative;
+  margin-top: 20px;
+  @include breakpoint("ipad-max") {
+    width: auto;
+  }
+  @include breakpoint("small-screen") {
+    margin: 0 auto;
+  }
+  // img{
+  //   height: 18px;
+  // }
+
+  .privilege-pack {
+    .suggestion-msg {
+      // @include breakpoint("desktop-base") {
+      //   top: 155px;
+      //   img {
+      //     transform: rotate(45deg);
+      //     position: relative;
+      //     top: -20px;
+      //     left: 5px;
+      //   }
+      // }
+    }
+  }
+  .suggestion-msg {
+    @include breakpoint("ipad-max") {
+      display: none;
+    }
+  }
+  .packs {
+    position: relative;
+
+    max-width: 555px;
+    border-radius: 8px;
+    margin-bottom: 18px;
+    background-color: $white;
+    border: 0.8px solid $violet;
+
+    @include breakpoint("ipad-max") {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    @include breakpoint("ipad-max") {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    &.blue-pack {
+      background: linear-gradient(90deg, #172951 0%, #1875ba 100%);
+      color: $white;
+
+      .packs__title,
+      .packs__right p {
+        color: $white;
+      }
+
+      .packs__bottom p {
+        color: #54c9ea;
+      }
+
+      .packs__right {
+        background-color: transparent;
+      }
+
+      .select-now {
+        color: $violet;
+        background-color: #fcac32;
+      }
+
+      .people-subscribed {
+        background-color: #efefef;
+        color: $violet;
+      }
+
+      .packs__subtitles {
+        color: #dbdad8;
+      }
+
+      .packs-list-item {
+        padding: 17px;
+        border-top: 1px solid #cccccc;
+        display: none;
+
+        li {
+          background-color: #eef4fe;
+          display: flex;
+          align-items: center;
+          width: 521px;
+          min-height: 51px;
+          border-radius: 3px;
+          margin-bottom: 13px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+
+          @include breakpoint(ipad-max) {
+            width: 100%;
+            // min-height: 130px;
+          }
+
+          .pack-list-item-left {
+            display: flex;
+            align-items: center;
+            background-color: #fcac32;
+            padding: 13px;
+            border-radius: 3px;
+            // min-height: 51px;
+
+            @include breakpoint(small-screen) {
+              // height: 130px;
+              padding: 28px 13px;
+            }
+
+            img {
+              height: 30px;
+              width: 30px;
+            }
+          }
+
+          .pack-list-item-right {
+            padding: 0 20px;
+
+            p {
+              color: $violet;
+              font-weight: 400;
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+
+    .packs-wrapper {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &.active {
+      .packs-list-item {
+        display: block;
+      }
+
+      .subscribe-dropdown {
+        img {
+          transform: rotate(178deg);
+        }
+      }
+    }
+
+    &__title {
+      color: $violet;
+      font: 500 16px $primary-font;
+      margin-bottom: 8px;
+      @include breakpoint("mobile-max") {
+        font-size: 14px;
+        @include breakpoint("mobile-max") {
+          font-size: 14px;
+        }
+        @include breakpoint("mobile-screen") {
+          font-size: 12px;
+          margin-bottom: 5px;
+        }
+      }
+
+      @include breakpoint("mobile-screen") {
+        font-size: 12px;
+        margin-bottom: 5px;
+      }
+
+      .plus {
+        font-weight: 400;
+      }
+    }
+
+    &__subtitles {
+      font: 400 12px $primary-font;
+      margin-bottom: 15px;
+      @include breakpoint("mobile-max") {
+        font-size: 10px;
+        margin-bottom: 10px;
+      }
+      @include breakpoint("mobile-screen") {
+        margin-bottom: 5px;
+      }
+      @include breakpoint("mobile-max") {
+        font-size: 10px;
+        margin-bottom: 10px;
+      }
+      @include breakpoint("mobile-screen") {
+        margin-bottom: 5px;
+      }
+    }
+    &__left {
+      padding: 15px 34px 15px 15px;
+      overflow: hidden;
+      @include breakpoint("mobile-max") {
+        padding: 14px 10px 8px 14px;
+      }
+
+      @include breakpoint("mobile-max") {
+        padding: 14px 10px 8px 14px;
+      }
+
+      .packs__bottom {
+        display: flex;
+        align-items: baseline;
+        p {
+          color: $violet;
+          font: 400 14px $primary-font;
+          margin-bottom: 0;
+          @include breakpoint("mobile-screen") {
+            font-size: 12px;
+            white-space: normal !important;
+          }
+
+          // @include breakpoint("mobile-screen") {
+          //   font-size: 12px;
+          //   white-space: nowrap;
+          // }
+          &.order {
+            padding-right: 20px;
+            margin-right: 18px;
+            position: relative;
+            border-right: 0.658086px solid #cccccc;
+            @include breakpoint("mobile-max") {
+              padding-right: 12px;
+              margin-right: 12px;
+            }
+            @include breakpoint("mobile-screen") {
+              // padding-right: 8px;
+              // margin-right: 8px;
+              border-right: 0;
+              padding:2px 0;
+              margin: 0 0 2px 0;
+              // border-bottom: 1px solid #cccccc;
+            }
+
+            &::after{
+              content:"";
+             @include breakpoint(mobile-screen){
+              position:absolute;
+              height: 1px;
+              width: 170px;
+              background-color: #cccccc;
+              left:0;
+              bottom: 0;
+             }
+
+             @include breakpoint(small-screen){
+              width:145px;
+             }
+            }
+          }
+          &.mtf {
+            margin-left: 16px;
+            @include breakpoint("mobile-max") {
+              margin-left: 12px;
+            }
+            @include breakpoint("mobile-screen") {
+              margin-left: 0;
+              margin-top: 3px;
+            }
+            @include breakpoint("mobile-max") {
+              margin-left: 12px;
+            }
+            @include breakpoint("mobile-screen") {
+              margin-left: 0;
+              margin-top: 3px;
+            }
+            img {
+              margin-left: 3px;
+            }
+          }
+          i {
+            font-style: normal;
+            font-size: 16px;
+            @include breakpoint("mobile-screen") {
+              font-size: 12px;
+            }
+            @include breakpoint("mobile-screen") {
+              font-size: 12px;
+            }
+          }
+          span {
+            font-size: 25px;
+            font-weight: 500;
+            // margin-right: 5px;
+            @include breakpoint("mobile-max") {
+              font-size: 20px;
+            }
+
+            @include breakpoint("mobile-screen") {
+              font-size: 12px;
+            }
+            @include breakpoint("mobile-max") {
+              font-size: 20px;
+            }
+
+            @include breakpoint("mobile-screen") {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+      .tip p {
+        white-space: normal !important;
+        left: -77px;
+      }
+    }
+    &__right {
+      min-width: 177px;
+      border-radius: 0 8px 8px 0;
+      min-width: 177px;
+      border-radius: 0 8px 8px 0;
+      padding: 15px 14px 14px 14px;
+      background-color: $darkest-silver;
+      flex-direction: column;
+      justify-content: end;
+      flex-direction: column;
+      justify-content: end;
+      @extend %center-element;
+      @include breakpoint("mobile-max") {
+        padding: 14px;
+      }
+      @include breakpoint("mobile-screen") {
+        min-width: 130px;
+        justify-content: center;
+      }
+      @include breakpoint("small-screen") {
+        padding: 26px 10px 10px;
+        min-width: 112px;
+      }
+      p {
+        font: 400 28px $primary-font;
+        font-size: 14px;
+        color: $medium-light-gray;
+        margin-bottom: 20px;
+        white-space: nowrap;
+        @include breakpoint("mobile-max") {
+          margin-bottom: 10px;
+          font-size: 12px;
+        }
+
+        @include breakpoint("mobile-screen") {
+          font-size: 10px;
+          white-space: initial;
+          text-align-last: center;
+          color: $violet;
+        }
+        @include breakpoint("mobile-max") {
+          margin-bottom: 10px;
+          font-size: 12px;
+        }
+
+        @include breakpoint("mobile-screen") {
+          font-size: 10px;
+          white-space: initial;
+          text-align-last: center;
+          color: $violet;
+        }
+        i {
+          font-style: normal;
+          font-size: 16px;
+          @include breakpoint("mobile-screen") {
+            font-size: 10px;
+          }
+          @include breakpoint("mobile-screen") {
+            font-size: 10px;
+          }
+        }
+        span {
+          font-size: 28px;
+          font-weight: 500;
+          @include breakpoint("mobile-max") {
+            font-size: 24px;
+          }
+
+          @include breakpoint("mobile-screen") {
+            font-size: 18px;
+          }
+          @include breakpoint("mobile-max") {
+            font-size: 24px;
+          }
+
+          @include breakpoint("mobile-screen") {
+            font-size: 18px;
+          }
+        }
+      }
+      .select-now {
+        padding: 10px 34px;
+        color: $white;
+        font: 400 14px $primary-font;
+        background-color: $dark-blue;
+        border-radius: 8px;
+        &:hover {
+          background-color: $orange;
+        }
+        @include breakpoint("mobile-screen") {
+          font-size: 10px;
+          padding: 6px 10px;
+        }
+      }
+
+      &.best-deal {
+        @include breakpoint("mobile-screen") {
+          background-color: $lightest-yellow;
+        }
+        @include breakpoint("mobile-screen") {
+          font-size: 10px;
+          padding: 6px 10px;
+        }
+      }
+      &.best-deal {
+        @include breakpoint("mobile-screen") {
+          background-color: $lightest-yellow;
+        }
+      }
+
+      .proceed {
+        background-color: $orange;
+        border: 1px solid $orange;
+        border-radius: 8px;
+        padding: 8px 37px;
+        font-size: 14px;
+        color: $white;
+        font-family: $font-poppins;
+
+        @include breakpoint(mobile-screen) {
+          font-size: 10px;
+          padding: 6px 10px;
+        }
+      }
+
+      .small-txt {
+        font-size: 12px;
+        font-weight: 400;
+      }
+
+      .free_value {
+        text-align: center;
+        margin: 0;
+      }
+    }
+
+    .subscribe-dropdown {
+      position: absolute;
+      bottom: -11px;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      background-color: $white;
+      border-radius: 50%;
+      height: 22px;
+      @extend %center-element;
+      width: 22px;
+      @include breakpoint("mobile-screen") {
+        height: 18px;
+        width: 18px;
+        img {
+          height: 7px;
+        }
+      }
+      width: 22px;
+      @include breakpoint("mobile-screen") {
+        height: 18px;
+        width: 18px;
+        img {
+          height: 7px;
+        }
+      }
+    }
+    .lightning-deal {
+      @extend %center-element;
+      @extend %center-element;
+      position: absolute;
+      top: 10px;
+      left: -25px;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background-color: $white;
+      border: 1px solid $violet;
+      @include breakpoint("desktop-base") {
+        height: 30px;
+        width: 30px;
+        left: -20px;
+      }
+      @include breakpoint("mobile-screen") {
+        height: 21px;
+        width: 21px;
+        left: -8px;
+      }
+      img {
+        height: 80%;
+        width: 80%;
+        border-radius: 50%;
+      }
+    }
+    .people-subscribed {
+      position: absolute;
+      right: 36px;
+      top: -10px;
+      text-align: center;
+      padding: 5px 10px;
+      border-radius: 63px;
+      background-color: $lightest-yellow;
+      @include breakpoint("mobile-screen") {
+        right: 5px;
+        background-color: $darkest-silver;
+      }
+    }
+
+    .packs-list-item {
+      padding: 17px;
+      border-top: 1px solid #cccccc;
+      display: none;
+
+      li {
+        background-color: #efefef;
+        display: flex;
+        align-items: center;
+        width: 521px;
+        min-height: 51px;
+        border-radius: 3px;
+        margin-bottom: 13px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        @include breakpoint(ipad-max) {
+          width: 100%;
+          // min-height: 130px;
+        }
+
+        .pack-list-item-left {
+          display: flex;
+          align-items: center;
+          background-color: #d9d3d3;
+          padding: 13px;
+          border-radius: 3px;
+          // min-height: 51px;
+
+          @include breakpoint(small-screen) {
+            // height: 130px;
+            padding: 28px 13px;
+          }
+
+          img {
+            height: 30px;
+            width: 30px;
+          }
+        }
+
+        .pack-list-item-right {
+          padding: 0 20px;
+
+          p {
+            color: $violet;
+            font-weight: 400;
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.pack-delivery-text{
+  font-size: 11.7px !important;
+  margin: 2px;
+  font-weight: 400 !important;
+
+  @include breakpoint(mobile-max){
+    font-size: 10px !important;
+    margin: 1px;
+  }
+  @include breakpoint(mobile-screen){
+    font-size: 9px !important;
+  }
+}
+
+.subs-value{
+  font-size: 20px !important;
+  font-weight: 500 !important;
+
+  @include breakpoint(mobile-max){
+    font-size: 14px !important;
+  }
+
+  @include breakpoint(mobile-screen){
+    font-size: 10px !important;
+  }
+}
+
+.blue-txt{
+  color: $dark-blue;
+}
+
+.pack-bold-txt {
+  color: $orange1;
+  font-weight: 500;
+}
+
+.priviledge-sub-txt {
+  margin: 3px 0;
+  img {
+    margin-right: 5px;
+  }
+}
+
+.independence-text{
+  @include breakpoint(ipad-max){
+    margin-bottom: 0 !important;
+  }
+
+  @include breakpoint(mobile-max){
+    margin-bottom: 5px !important;
+    line-height: 1.2;
+    font-size: 23px !important;
+  }
+}
+
+.packs-amount{
+  font-size: 28px !important;
+
+  @include breakpoint(mobile-screen){
+    font-size: 14px !important;
+  }
+ }
+
+ .independence-pack{
+  @include breakpoint(mobile-screen){
+    flex-direction: column;
+    height: 34px !important;
+  }
+   &::before{
+    content:"";
+    @include breakpoint(mobile-screen){
+      width: 112% !important;
+      height: 40px !important;
+      top: 52% !important;
+    }
+   }
+ }
+
+//
+// @media (max-width: 575px) {
+
+//   .subscribe .packs__left .packs__bottom p{
+
+//     white-space: normal !important;
+
+//     left: -53px;
+
+//   }
+
+// }

@@ -1,0 +1,632 @@
+.thankyou {
+  max-width: 720px;
+  @include breakpoint("ipad-max") {
+    padding-top: 50px;
+  }
+
+  &__card {
+    padding: 10px 30px 30px;
+    border-radius: 16px;
+    box-shadow: 0px 0px 16px rgba(214, 214, 214, 0.25);
+    background-image: $dark-blue-gradient;
+    color: $white;
+
+    @include breakpoint("mobile-max") {
+      padding: 10px 20px 20px;
+    }
+
+    @include breakpoint("mobile-max") {
+      padding: 10px 20px 20px;
+    }
+  }
+
+  //   top section
+  &__top {
+    @extend %center-element;
+
+    flex-direction: column;
+    margin-bottom: 30px;
+    position: relative;
+
+    @include breakpoint("desktop-small") {
+      margin-bottom: 20px;
+    }
+
+    @include breakpoint("mobile-screen") {
+      margin-bottom: 16px;
+    }
+
+    // top gif
+    &-gif {
+      height: 110px;
+      width: 110px;
+      margin-bottom: 8px;
+
+      @include breakpoint("small-screen") {
+        height: 85px;
+        width: 85px;
+      }
+
+      @include breakpoint("small-screen") {
+        height: 85px;
+        width: 85px;
+      }
+    }
+
+    // card-title
+    .title {
+      font: 500 36px $primary-font;
+      margin-bottom: 15px;
+      text-align: center;
+
+      @include breakpoint("desktop-small") {
+        margin-bottom: 10px;
+      }
+
+      @include breakpoint("mobile-max") {
+        font-size: 32px;
+      }
+
+      @include breakpoint("mobile-screen") {
+        font-size: 20px;
+      }
+    }
+
+    // .card-details
+    .details {
+      text-align: center;
+      font: 400 16px $primary-font;
+      max-width: 500px;
+
+      @include breakpoint("mobile-max") {
+        max-width: 100%;
+        font-size: 14px;
+      }
+
+      @include breakpoint("mobile-screen") {
+        font-size: 12px;
+      }
+
+      @include breakpoint("mobile-max") {
+        max-width: 100%;
+        font-size: 14px;
+      }
+
+      @include breakpoint("mobile-screen") {
+        font-size: 12px;
+      }
+    }
+
+    // left right bg gif
+    &-bg-gif {
+      position: absolute;
+      max-height: 280px;
+      top: 0;
+
+      @include breakpoint("small-screen") {
+        max-height: 150px;
+      }
+
+      @include breakpoint("small-screen") {
+        max-height: 150px;
+      }
+
+      &.left-gif {
+        left: 0;
+      }
+
+      &.right-gif {
+        right: 0;
+      }
+    }
+  }
+
+  //bottom section
+  &__bottom {
+    .explore {
+      font-size: 16px;
+
+      @include breakpoint(small-screen) {
+        justify-content: center;
+      }
+
+      img {
+        margin-left: 5px;
+        height: 18px;
+      }
+    }
+
+    .reference-link {
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 0px;
+      @include breakpoint("mobile-max") {
+        flex-direction: column;
+        row-gap: 20px;
+      }
+
+      @include breakpoint("mobile-max") {
+        flex-direction: column;
+        row-gap: 20px;
+      }
+
+      .refer {
+        margin-top: 0px;
+        padding-right: 8px;
+        align-items: center;
+        border-radius: 12px;
+        border: 1px solid $white;
+        background: rgba(81, 201, 235, 0.2);
+        justify-content: space-between;
+        max-width: 480px;
+        position: relative;
+
+        @include breakpoint("desktop-base") {
+          margin-right: 10px;
+        }
+
+        @include breakpoint("mobile-max") {
+          margin-right: 0;
+          padding: 5px;
+        }
+
+        @include breakpoint("mobile-screen") {
+          max-width: 100%;
+          width: 100%;
+          padding: 30px 20px;
+          margin-top: 30px;
+          margin-bottom: 30px;
+          justify-content: center;
+        }
+
+        .gift-img {
+          @include breakpoint("mobile-screen") {
+            display: none;
+          }
+        }
+
+        .gift-img-mobile {
+          display: none;
+
+          @include breakpoint("mobile-screen") {
+            display: block;
+            position: absolute;
+            left: 40%;
+            top: -30%;
+          }
+        }
+
+        &-invite {
+          font-size: 14px;
+          margin-right: 10px;
+          margin-left: 5px;
+          max-width: 250px;
+
+          @include breakpoint("desktop-base") {
+            font-size: 13px;
+          }
+
+          @include breakpoint("mobile-screen") {
+            font-size: 12px;
+            max-width: 100%;
+            text-align: center;
+            margin: 10px auto;
+          }
+
+          span {
+            font-weight: 500;
+          }
+        }
+
+        // refer button
+        &-btn {
+          margin: 8px 0;
+          color: #fff;
+          background-color: #ff5500;
+          height: 44px;
+          max-width: 280px;
+          min-width: max-content;
+          border-radius: 8px;
+          padding: 1rem;
+
+          @include breakpoint("mobile-max") {
+            margin: 5px 0;
+            font-size: 14px;
+          }
+
+          @include breakpoint("mobile-screen") {
+            position: absolute;
+            bottom: -30px;
+          }
+
+        }
+      }
+    }
+
+    .social {
+      &__item {
+        margin-right: 10px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        @include breakpoint("desktop-base") {
+          margin-right: 5px;
+        }
+
+        img {
+          @include breakpoint("desktop-base") {
+            height: 30px;
+          }
+        }
+
+        @include breakpoint("desktop-base") {
+          margin-right: 5px;
+        }
+
+        img {
+          @include breakpoint("desktop-base") {
+            height: 30px;
+          }
+        }
+      }
+    }
+  }
+
+  &-msg-card {
+    margin-top: 0;
+    margin-top: 0;
+
+    // background-color: red;
+    .chat-card-footer {
+      span {
+        color: $orange;
+        font-size: 15px;
+        @include breakpoint(desktop-base){
+          font-size: 14px;
+        }
+        &:first-child {
+          margin-bottom: 10px;
+        }
+
+        a {
+          color: $orange;
+        }
+
+        i {
+          margin-right: 15px;
+        }
+      }
+
+      img {
+        width: 15px;
+        height: 15px;
+        margin-right: 5px;
+
+        @include breakpoint(desktop-base) {
+          margin-right: 3px;
+          width: 12px;
+          height: 12px;
+        }
+      }
+    }
+
+    &+.user-bottom-img {}
+  }
+}
+
+.download-app {
+  margin-top: 40px;
+  max-width: 720px;
+  max-width: 720px;
+  @extend %center-element;
+  flex-direction: column;
+
+  @include breakpoint("desktop-medium") {
+    margin-top: 6px;
+  }
+
+  @include breakpoint("desktop-small") {
+    margin-top: 10px;
+  }
+
+  @include breakpoint("desktop-small") {
+    margin-top: 10px;
+  }
+
+  &__title {
+    color: $violet;
+    font: 500 16px $primary-font;
+    margin-bottom: 20px;
+
+    @include breakpoint("desktop-small") {
+      margin-bottom: 10px;
+    }
+
+    @include breakpoint("desktop-small") {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__store {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include breakpoint("mobile-screen") {
+      width: 100%;
+    }
+
+    .store {
+      & .qr-code {
+        padding-right: 15px;
+
+        @include breakpoint("mobile-screen") {
+          padding-right: 0;
+          margin-right: 10px;
+          display: none;
+        }
+      }
+
+      &:first-child {
+        padding-right: 32px;
+        border-right: 2px solid $most-lightest-gray;
+
+        @include breakpoint("mobile-screen") {
+          padding: 0;
+          margin-right: 15px;
+          border: none;
+        }
+      }
+
+      &:last-child {
+        padding-left: 32px;
+
+        @include breakpoint("mobile-screen") {
+          padding: 0;
+        }
+      }
+
+      &-link {
+        img {
+          @include breakpoint("mobile-max") {
+            max-width: 130px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// feedback form modal
+
+.feedback-modal {
+  .modal-dialog {
+    max-width: 650px !important;
+
+    @include breakpoint("mobile-max") {
+      max-width: 90% !important;
+      margin: 10px auto;
+    }
+
+    @include breakpoint("mobile-screen") {
+      max-width: 95% !important;
+    }
+
+    .modal-content {
+      @include breakpoint("mobile-screen") {
+        padding: 0;
+      }
+    }
+
+    .modal-body {
+      @include breakpoint("mobile-screen") {
+        padding: 16px;
+      }
+
+      @include breakpoint("mobile-screen") {
+        padding: 16px;
+      }
+
+      .modal-title {
+        text-align: left;
+        margin-bottom: 12px;
+
+        @include breakpoint("mobile-screen") {
+          font-size: 20px;
+          margin-bottom: 8px;
+        }
+      }
+
+      .modal-para {
+        color: $dark-gray;
+        text-align: left;
+        font: 400 18px $primary-font;
+        margin-bottom: 0;
+
+        @include breakpoint("ipad-max") {
+          font-size: 16px;
+        }
+
+        @include breakpoint("mobile-screen") {
+          font-size: 14px;
+        }
+
+        @include breakpoint("ipad-max") {
+          font-size: 16px;
+        }
+
+        @include breakpoint("mobile-screen") {
+          font-size: 14px;
+        }
+      }
+
+      .feedback-form {
+        margin-top: 20px;
+
+        @include breakpoint("mobile-screen") {
+          margin-top: 15px;
+          margin-bottom: 10px;
+        }
+
+        .rating {
+          margin-bottom: 18px;
+
+          @include breakpoint("mobile-screen") {
+            margin-bottom: 10px;
+          }
+
+          @include breakpoint("mobile-screen") {
+            margin-bottom: 10px;
+          }
+
+          &-star {
+            margin-right: 8px;
+
+            &:last-child {
+              margin-right: 0;
+            }
+
+            @include breakpoint("mobile-screen") {
+              height: 30px;
+              width: 30px;
+            }
+
+            @include breakpoint("mobile-screen") {
+              height: 30px;
+              width: 30px;
+            }
+          }
+        }
+
+        .tell-us {
+          h4 {
+            color: $violet;
+            font: 400 20px $primary-font;
+            margin-bottom: 14px;
+
+            @include breakpoint("ipad-max") {
+              font-size: 16px;
+            }
+
+            @include breakpoint("mobile-screen") {
+              font-size: 14px;
+              margin-bottom: 10px;
+            }
+
+            @include breakpoint("ipad-max") {
+              font-size: 16px;
+            }
+
+            @include breakpoint("mobile-screen") {
+              font-size: 14px;
+              margin-bottom: 10px;
+            }
+          }
+
+          // checkboxes
+          .feedback-message {
+            display: flex;
+            flex-wrap: wrap;
+            row-gap: 10px;
+            column-row-gap: 10px;
+            column-gap: 10px;
+
+            label {
+              position: relative;
+              width: calc((100% / 3) - 20px);
+
+              @include breakpoint("mobile-screen") {
+                width: 48%;
+                justify-content: space-between;
+              }
+
+              @include breakpoint("mobile-screen") {
+                width: 48%;
+                justify-content: space-between;
+              }
+            }
+
+            .personal-input {
+              position: absolute;
+              inset: 0;
+              opacity: 0;
+
+              &:checked+.form-card {
+                background: $blue;
+                color: $white;
+              }
+
+              // &:not(:checked) + .form-card {
+              //   background-color: $light-blue;
+              // }
+            }
+
+            .form-card {
+              color: $violet;
+              width: 100%;
+              padding: 15px 0;
+              margin-right: 10px;
+              display: inline-block;
+              font: 400 16px $primary-font;
+              background-color: $light-blue;
+              text-align: center;
+              white-space: nowrap;
+              border-radius: 8px;
+
+              @include breakpoint("ipad-max") {
+                font-size: 14px;
+              }
+
+              @include breakpoint("mobile-screen") {
+                font-size: 12px;
+                padding: 12px 0;
+              }
+
+              @include breakpoint("ipad-max") {
+                font-size: 14px;
+              }
+
+              @include breakpoint("mobile-screen") {
+                font-size: 12px;
+                padding: 12px 0;
+              }
+            }
+          }
+        }
+
+        // textarea
+        .add-comments {
+          margin-top: 15px;
+          margin-bottom: 20px;
+
+          textarea {
+            color: $violet;
+            resize: none;
+            font-size: 14px;
+            width: 100%;
+            height: 100px;
+            padding: 10px 14px;
+            border: none;
+            border-radius: 8px;
+            caret-color: $violet;
+            background-color: $light-blue;
+
+            &::placeholder {
+              color: $violet;
+            }
+
+            @include breakpoint("mobile-screen") {
+              font-size: 12px;
+            }
+
+            @include breakpoint("mobile-screen") {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

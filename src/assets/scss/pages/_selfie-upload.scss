@@ -1,0 +1,153 @@
+.selfie-upload {
+  .page-bottom-img {
+    width: 180px;
+  }
+
+  .page {
+    &-title {
+      margin-bottom: 5px;
+      line-height: 20px;
+    }
+
+    &-subtitle {
+      margin-bottom: 5px;
+    }
+  }
+
+  .upload-front-side.selfie-img {
+    max-height: 265px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @include breakpoint(ipad-max) {
+      max-height: 225px;
+      // width: 50%;
+    }
+    @include breakpoint(mobile-screen) {
+      max-height: 185px;
+    }
+    @include breakpoint(small-screen) {
+      // width: 70%;
+    }
+
+    .user-img {
+      margin-top: 20px;
+      max-height: 150px;
+      @include breakpoint(mobile-max) {
+        height: 120px;
+      }
+      @include breakpoint(mobile-screen) {
+        height: 100px;
+      }
+    }
+    .camera-img {
+      padding: 0;
+      margin-bottom: 10px;
+      box-shadow: 0 4px 7px 0 rgb(64 64 64 / 16%);
+      border-radius: 100%;
+
+      @include breakpoint(ipad-max) {
+        width: 41px;
+        height: 41px;
+      }
+      @include breakpoint(mobile-screen) {
+        margin-top: 5px;
+        margin-top: -10px;
+      }
+    }
+  }
+
+  .upload-points-section {
+    gap: 0;
+    column-gap: 31px;
+
+    @include breakpoint(desktop-base) {
+      column-gap: 0;
+    }
+  }
+
+  .form-tip {
+    @include breakpoint(mobile-max) {
+      display: none;
+    }
+  }
+
+  .scan-upload-photo {
+    background-color: $light-sky-blue;
+    border-radius: 4px;
+    text-align: center;
+    margin: 6px 0 11px 0;
+    padding: 7px 20px;
+
+    @include breakpoint(ipad-max) {
+      margin: 13px 0 8px 0;
+    }
+    p {
+      &:first-child {
+        color: $blue;
+        font-weight: 400;
+        font-size: 14px;
+
+        @include breakpoint(desktop-large) {
+          font-size: 13px;
+        }
+
+        @include breakpoint(ipad-max) {
+          font-size: 11px;
+        }
+
+        @include breakpoint(mobile-screen) {
+          font-weight: 500;
+        }
+      }
+
+      &:nth-child(2) {
+        color: $dark-gray;
+        font-weight: 400;
+        font-size: 12px;
+        text-align: center;
+
+        @include breakpoint(ipad-max) {
+          font-size: 10px;
+        }
+
+        @include breakpoint(mobile-screen) {
+          text-align: left;
+        }
+      }
+
+      @include breakpoint(mobile-screen) {
+        text-align: left;
+      }
+    }
+  }
+
+  .upload-img-modal {
+    .modal-body h3 {
+      margin-bottom: 45px;
+    }
+  }
+
+  .form-tip-mobile {
+    display: none;
+    @include breakpoint(mobile-max) {
+      display: block;
+      margin: 0;
+    }
+  }
+
+  .common-btn {
+    @include breakpoint(ipad-max) {
+      margin-top: 10px;
+    }
+  }
+  .user-bottom-img {
+    img {
+      height: 326px;
+    }
+  }
+}
+.selfie-top {
+  margin-top: 5px;
+}

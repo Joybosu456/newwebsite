@@ -1,0 +1,52 @@
+.gender-error,
+.maritalstatus-error,
+.incomerange-error {
+    position: absolute;
+    bottom: -15px;
+    font-weight: 500;
+}
+.incomerange-error {
+    bottom: -5px;
+}
+.email-otp-error {
+    position: absolute;
+    bottom: -12px;
+    left: 0;
+    color: $red;
+    font-size: 10px;
+    font-weight: 400;
+}
+.form-control.is-invalid:focus,
+.was-validated .form-control:invalid:focus {
+    border-color: none;
+    box-shadow: none;
+}
+.form-control.is-invalid,
+.was-validated .form-control:invalid {
+    background-image: none;
+    padding-right: 0;
+}
+
+.label-required {
+    color: $red;
+}
+
+.share-error {
+    display: none;
+    color: $red;
+    // position: absolute;
+    // bottom: 7px;
+    // left: 0;
+    width: 100%;
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 5px;
+
+    @include breakpoint(small-screen) {
+        font-size: 10px;
+    }
+}
+
+.currency-error {
+    display: none;
+}

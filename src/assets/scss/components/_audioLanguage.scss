@@ -1,0 +1,65 @@
+.audio-modal {
+    .modal-dialog {
+        max-width: 322px !important;
+        width: 90% !important;
+        position: absolute;
+        right: 30px;
+        top: 64px;
+    }
+
+    .audioicon {
+        height: 35px;
+        width: 100px;
+        border-color: unset;
+        outline: none;
+        border-radius: 8px;
+        background-color: #0072bc;
+        border: none;
+        &:focus{
+            outline: none;
+            box-shadow: none;
+
+        }
+
+
+        .icon-pause,.icon-play{
+        color: $white;
+        line-height: 1.7;
+        }
+    }
+
+    .modal-content {
+        padding: 1px;
+        height: 93px !important;
+
+    }
+
+    .modal-body {
+        position: relative;
+        flex: 1 1 auto;
+        padding: 0rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .close i {
+        font-size: 13px;
+        color: #002356;
+    }
+    .audioP {
+        font-size: 18px;
+        color: #002356;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        min-width: 66px;
+    }
+    .audio-btn-grp{
+        .custom-form-select{
+            background-color: white;
+            color: #0072bc;
+            border: 1px solid #0072bc;
+        }
+    }
+}

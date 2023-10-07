@@ -1,0 +1,181 @@
+.address-details-second {
+  .page {
+    &-title {
+      margin-bottom: 13px;
+      line-height: 20px;
+    }
+
+    &-subtitle {
+      margin-bottom: 10px; 
+    }
+  }
+
+  .step-label {
+    margin: 0;
+  }
+
+  .upload-front-side {
+    margin: 0;
+
+    .address-proof-img-link {
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+
+      @include breakpoint(ipad-max) {
+        justify-content: center;
+      }
+    }
+
+    .addarcard-img {
+      width: 100%;
+      height: 96px;
+      border: 1px solid #002356;
+      border-radius: 9px;
+      mix-blend-mode: normal;
+      margin-bottom: 9px;
+      backdrop-filter: blur(134px);
+    }
+
+    .address-img-name {
+      color: $dark-gray;
+      font-weight: 400;
+      font-size: 10px;
+    }
+  }
+
+  .address-proof-box-wrapper {
+    gap: 32px;
+  }
+
+  .address-detail-select {
+    border: 1px solid black;
+    border-radius: 8px;
+    background: $white;
+    max-width: 490px;
+    margin-bottom: 15px;
+  }
+
+  .select {
+    max-width: 490px;
+    width: 100%;
+    height: 49px;
+    margin: 12px 0 0 0;
+
+    @include breakpoint(ipad-max) {
+      margin: 12px 0;
+    }
+
+    @include breakpoint(mobile-max) {
+      display: block;
+      max-width: 100%;
+    }
+
+    .select-styled {
+      background-color: $white;
+      color: $violet;
+      font-weight: 400;
+      font-size: 18px;
+      border: 1px solid $violet;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 8%);
+      padding: 15px 22px;
+
+      &:after {
+        top: 19px;
+        right: 22px;
+        border-top: 2px solid $black;
+        border-left: 2px solid $black;
+      }
+
+      &:active,
+      &.active {
+        &:after {
+          border-top: 0;
+          border-left: 0;
+          border-bottom: 2px solid $black;
+          border-right: 2px solid $black;
+        }
+      }
+    }
+
+    .select-options {
+      background-color: $white;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 8%);
+
+      li {
+        color: $violet;
+        padding: 15px 22px;
+      }
+    }
+  }
+
+  .form-tip {
+    @include breakpoint(mobile-max) {
+      display: none;
+    }
+
+    .form-tip-label {
+      padding: 5px 10px 4px 5px;
+      margin: 15px 10px;
+      background: none;
+      @include breakpoint(mobile-screen) {
+        font-size: 13px;
+      }
+
+      @include breakpoint(small-screen) {
+        font-size: 10px;
+      }
+    }
+  }
+
+  .form-tip-mobile {
+    display: none;
+    @include breakpoint(mobile-max) {
+      display: block;
+      margin: 0;
+    }
+  }
+
+  .common-btn {
+    @include breakpoint(ipad-max) {
+      margin-top: 20px;
+    }
+  }
+  .file-format-popup {
+    @include breakpoint("ipad-max") {
+      display: block;
+    }
+
+    @include breakpoint(mobile-max) {
+      display: none;
+    }
+  }
+
+  .mobile-file {
+    display: none;
+    @include breakpoint(mobile-max) {
+      display: block;
+    }
+  }
+
+  // react-select-address-detail
+
+  .react-select-address-detail {
+    margin: 12px 0;
+
+    .react-select-dropdown {
+      width: 100%;
+      max-width: 490px;
+
+      @include breakpoint(mobile-max) {
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+.step-tip-wrapper {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
